@@ -1,0 +1,29 @@
+
+header, header {
+    text-align: center;
+    color: black;
+}
+
+#title {
+    font-weight: bolder;
+    font-size: 70px;
+    font-family: 'Arvo', serif;
+    padding: 10px;
+}
+
+#subtitle {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Arvo', serif;
+    padding: 10px;
+}
+
+#guru_icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=24b34aff&noise=000000&density=85&opacity=17);
+}
