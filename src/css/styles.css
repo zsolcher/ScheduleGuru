@@ -1,29 +1,50 @@
 
-header, header {
-    text-align: center;
-    color: black;
+#scaffold {
 }
 
 #title {
+    text-align: center;
     font-weight: bolder;
-    font-size: 70px;
+    font-size: 45px;
+    font-family: 'Berkshire Swash', cursive;
+    padding: 10px;
+}
+
+#menuTitle {
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
     font-family: 'Arvo', serif;
     padding: 10px;
 }
 
-#subtitle {
-    font-weight: bold;
-    font-size: 20px;
-    font-family: 'Arvo', serif;
+#contentArea {
     padding: 10px;
+    font-size: 18px;
+    text-align: left
 }
 
 #guru_icon {
+    width: 50px;
+    height: 50px;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
+#menu-dropdown {
+    top: 38px;
+    horiz-align: left;
+}
+
 body {
-    background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=24b34aff&noise=000000&density=85&opacity=17);
+    background-color: #89bdff;
+}
+
+core-item:hover {
+    background-color: #89bdff;
+}
+
+core-item.menuItem {
+    font-size: 20px;
 }
