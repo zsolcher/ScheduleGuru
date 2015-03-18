@@ -11,7 +11,8 @@
     <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
 
     <!-- 1. Load webcomponents.min.js for polyfill support. -->
-    <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <!-- <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script> -->
+    <script src="../bower_components/webcomponentsjs/webcomponents.js"></script>
 
     <!--  Polymer Imports  -->
     <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
@@ -21,14 +22,75 @@
     <link rel="import" href="../bower_components/core-drawer-panel/core-drawer-panel.html">
     <link rel="import" href="../bower_components/core-scaffold/core-scaffold.html">
     <link rel="import" href="../bower_components/core-icons/core-icons.html">
+    <link rel="import" href="../bower_components/core-pages/core-pages.html">
 
 
     <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
     <link rel="import" href="../bower_components/paper-button/paper-button.html">
+    <link rel="import" href="../bower_components/paper-fab/paper-fab.html">
     <link rel="import" href="../bower_components/paper-menu-button/paper-menu-button.html">
     <link rel="import" href="../bower_components/paper-item/paper-item.html">
     <link rel="import" href="../bower_components/paper-dropdown/paper-dropdown.html">
-    <!--  Polymer Imports  -->
+    <link rel="import" href="../bower_components/paper-tabs/paper-tab.html">
+    <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+
+    <!--  JQuery Imports  -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!--  JQuery Imports  -->
+
+
+    <style>
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        core-pages {
+            width: 700px;
+            height: 1000px;
+            border: 1px solid black;
+            -webkit-user-select: none;
+            border-radius: 5px;
+        }
+
+        core-pages > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: inherit;
+        }
+
+        core-pages.fancy {
+            border: none;
+            margin-left: 2em;
+        }
+
+        core-pages.fancy > .one {
+            background-color: red;
+        }
+
+        core-pages.fancy > .two {
+            background-color: green;
+        }
+
+        core-pages.fancy > .three {
+            background-color: blue;
+        }
+
+        core-pages.fancy > .four {
+            background-color: purple;
+        }
+
+        core-pages.fancy > .five {
+            background-color: deeppink;
+        }
+
+    </style>
+
 
 </head>
 
@@ -53,9 +115,40 @@
         <core-icon icon="account-circle" style="width:50px; height:50px;"> </core-icon>
     </paper-button>
 
-    <div id="contentArea">
-        Content goes here...
+    <paper-tabs selected="0" main>
+        <paper-tab>Upload Transcript</paper-tab>
+        <paper-tab>Preferences</paper-tab>
+        <paper-tab>Major</paper-tab>
+        <paper-tab>Common Curriculum</paper-tab>
+        <paper-tab>Miscellaneous</paper-tab>
+        <paper-tab>Finalize</paper-tab>
+    </paper-tabs>
+
+    <div id="buildScheduleArea" unresolved fullbleed horizontal center center-justified layout>
+        <paper-fab id="fabNavLeft"></paper-fab>
+        <paper-fab id="fabNavRight"></paper-fab>
+        <core-pages class="fancy" selected="0">
+            <div class="one">One</div>
+            <div class="two">Two</div>
+            <div class="three">Three</div>
+            <div class="four">Four</div>
+            <div class="five">Five</div>
+        </core-pages>
+
     </div>
+
+    <script>
+        document.querySelector('core-pages.fancy').onclick = function(e) {
+            this.selected = (this.selected + 1) % this.items.length;
+            this.async(function() {
+                if (this.selectedIndex == 0) {
+                    this.selectedItem.classList.remove('begin');
+                } else if (this.selectedIndex == this.items.length - 1) {
+                    this.items[0].classList.add('begin');
+                }
+            });
+        };
+    </script>
 
 </core-scaffold>
 
