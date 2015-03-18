@@ -45,6 +45,11 @@
     right: 35%;
 }
 
+#txtFirstName {
+    position: relative;
+    top: 20px;
+}
+
 body {
     background-color: #BBDEFB;
 }

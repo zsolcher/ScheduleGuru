@@ -6462,7 +6462,7 @@ scope.isIE = isIE;
     });
   }
 
-  // http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html#dfn-template-contents-owner
+  // http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/master.html#dfn-template-contents-owner
   function getOrCreateTemplateContentsOwner(template) {
     var doc = template.ownerDocument
     if (!doc.defaultView)
