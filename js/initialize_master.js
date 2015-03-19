@@ -12,6 +12,7 @@ window.onload = function() {
         $("#buildScheduleArea").hide();
         $("#accountSettingsArea").hide();
         $("#savedSchedulesArea").hide();
+        $("#aboutUsArea").hide();
     }
 
     //Hide all areas other than home
@@ -59,6 +60,14 @@ window.onload = function() {
             'click': function(){
                 hideAllAreas();
                 $("#accountSettingsArea").show();
+            }
+        }
+    );
+
+    $("#menuItemAboutUs").on({
+            'click': function(){
+                hideAllAreas();
+                $("#aboutUsArea").show();
             }
         }
     );
