@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b89eda31-50bf-4a8e-a294-acf53479ffea" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/ScheduleGuru" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/initialize_master.js" afterPath="$PROJECT_DIR$/js/initialize_master.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -39,9 +40,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.625" vertical-offset="840" max-vertical-offset="3240">
-              <caret line="72" column="36" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
-              <folding />
+            <state vertical-scroll-proportion="0.140625" vertical-offset="1791" max-vertical-offset="3240">
+              <caret line="123" column="26" selection-start-line="123" selection-start-column="26" selection-end-line="123" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#div#5;n#core-scaffold#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,6 +82,7 @@
         <option value="$PROJECT_DIR$/ScheduleGuru/js/initialize_master.js" />
         <option value="$PROJECT_DIR$/ScheduleGuru/index.html" />
         <option value="$PROJECT_DIR$/js/initialize_master.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -250,7 +254,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="29" y="22" width="1240" height="718" extended-state="1" />
+    <frame x="29" y="22" width="1240" height="718" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -342,9 +346,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.625" vertical-offset="840" max-vertical-offset="3240">
-          <caret line="72" column="36" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
-          <folding />
+        <state vertical-scroll-proportion="0.140625" vertical-offset="1791" max-vertical-offset="3240">
+          <caret line="123" column="26" selection-start-line="123" selection-start-column="26" selection-end-line="123" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#5;n#core-scaffold#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
