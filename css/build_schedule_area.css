@@ -1,0 +1,66 @@
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+core-pages {
+    width: 700px;
+    height: 600px;
+    border: 1px solid black;
+    -webkit-user-select: none;
+    border-radius: 5px;
+}
+
+/*core-pages > div {*/
+/*display: flex;*/
+/*justify-content: center;*/
+/*align-items: center;*/
+/*border-radius: inherit;*/
+/*}*/
+
+core-pages.fancy {
+    border: none;
+    margin-left: 2em;
+}
+
+core-pages.fancy > .one {
+    background-color: red;
+}
+
+core-pages.fancy > .two {
+    background-color: green;
+}
+
+core-pages.fancy > .three {
+    background-color: blue;
+}
+
+core-pages.fancy > .four {
+    background-color: purple;
+}
+
+core-pages.fancy > .five {
+    background-color: deeppink;
+}
+
+.fabNavLeft {
+    float:left;
+    background-color: #00bbd3;
+    position: absolute;
+    top: 300px;
+}
+
+.fabNavRight {
+    float: right;
+    background-color: #00bbd3;
+    top: 300px;
+}
+
+.page {
+    position: absolute;
+    background-color: #accbff;
+}

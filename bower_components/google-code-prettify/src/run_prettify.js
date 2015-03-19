@@ -51,7 +51,7 @@
 //   2. Loads the sunburst.css stylesheet instead of the default prettify.css
 //      stylesheet.
 //      A gallery of stylesheets is available at
-//      https://google-code-prettify.googlecode.com/svn/trunk/styles/master.html
+//      https://google-code-prettify.googlecode.com/svn/trunk/styles/login.html
 //   3. Since autorun=false is not specified, calls prettyPrint() on page load.
 
 
