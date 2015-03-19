@@ -1,10 +1,181 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="en">
+    <title>Our Story</title>
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="css/ourStoryStyle.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+
+    <!-- 1. Load webcomponents.min.js for polyfill support. -->
+    <!-- <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script> -->
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+
+    <!--  Polymer Imports  -->
+    <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
+    <link rel="import" href="bower_components/core-menu/core-menu.html">
+    <link rel="import" href="bower_components/core-item/core-item.html">
+    <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
+    <link rel="import" href="bower_components/core-drawer-panel/core-drawer-panel.html">
+    <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+    <link rel="import" href="bower_components/core-icons/core-icons.html">
+    <link rel="import" href="bower_components/core-pages/core-pages.html">
+
+
+    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+    <link rel="import" href="bower_components/paper-menu-button/paper-menu-button.html">
+    <link rel="import" href="bower_components/paper-item/paper-item.html">
+    <link rel="import" href="bower_components/paper-dropdown/paper-dropdown.html">
+    <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
+    <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+
+    <!--  JQuery Imports  -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!--  JQuery Imports  -->
 </head>
+
 <body>
 
+<core-scaffold id="scaffold">
+    <core-header-panel navigation flex >
+        <core-toolbar id="navheader" style="background: #4285f4;">
+            <div flex id="menuTitle"> Main Menu</div>
+        </core-toolbar>
+        <core-menu id="navmenu">
+            <core-item class="menuItem" icon="home" label="Home"></core-item>
+            <core-item class="menuItem" icon="schedule" label="Build a Schedule"></core-item>
+            <core-item class="menuItem"icon="save" label="Saved Schedules"></core-item>
+            <core-item class="menuItem" icon="settings" label="Account Settings"></core-item>
+            <core-item class="menuItem" icon="perm-identity" label="Our Story"></core-item>
+        </core-menu>
+    </core-header-panel>
+
+    <div flex id="title" tool> Schedule Guru</div>
+
+    <paper-button tool>
+        <core-icon icon="account-circle" style="width:50px; height:50px;"> </core-icon>
+    </paper-button>
+
+    <paper-tabs selected="0" main>
+        <paper-tab>Upload Transcript</paper-tab>
+        <paper-tab>Preferences</paper-tab>
+        <paper-tab>Major</paper-tab>
+        <paper-tab>Common Curriculum</paper-tab>
+        <paper-tab>Miscellaneous</paper-tab>
+        <paper-tab>Finalize</paper-tab>
+    </paper-tabs>
+
+    <div id="homeArea">
+        Home Area
+    </div>
+
+    <div id="buildScheduleArea" unresolved fullbleed horizontal center center-justified layout>
+        <paper-fab id="fabNavLeft"></paper-fab>
+        <paper-fab id="fabNavRight"></paper-fab>
+        <core-pages class="fancy" selected="0">
+            <div class="one">
+                <input id="txtFirstName"type="text" value="Hello World">
+
+            </div>
+            <div class="two">Two</div>
+            <div class="three">Three</div>
+            <div class="four">Four</div>
+            <div class="five">Five</div>
+        </core-pages>
+
+
+<center>
+    <h1> Our Story </h1>
+</center>
+
+<section id="aboutus">
+    <p style="background:white; opacity:0.8;">
+    <center style="font-size: 20px; font-family:cursive, verdana;">
+        Our story begin many many days ago, when we were first assigned to this project. We took this journey in an attempt to improve our current model of TigerPaws -- which is a terrible, archiac way of scheduling classes.
+
+        <br>
+        <br> Meet the Team:
+        <br>
+
+
+        <table width="500px" height="100%" border="2" color=white>
+
+            <tr>
+                <td>
+                    <img src="imgs/rb.jpeg" alt="Rob Bierman" />
+                </td>
+
+                <td>
+                    Rob Bierman
+                    <br>
+                    <br>
+                    Our fearless hobbit
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <img src="imgs/kj.jpeg" alt="Kendrick James" />
+                </td>
+
+                <td>
+                    Kendrick James
+                    <br>
+                    <br>
+                    No description needed.
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <img src="imgs/ll.jpeg" alt="Lu Liu" />
+                </td>
+
+                <td>
+                    Lu Liu
+                    <br>
+                    <br>
+                    Need to figure out how to crop pics
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img src="imgs/co.jpeg" alt="Caleb Olson" />
+                </td>
+
+                <td>
+                    Caleb Olson
+                    <br>
+                    <br>
+                    Where's the Algorithm?!
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <img src="imgs/zs.jpeg" alt="Zach Solcher" />
+                </td>
+
+                <td>
+                    Zach Solcher
+                    <br>
+                    <br>
+                    Webmaster
+                </td>
+            </tr>
+        </table>
+    </center>
+    </p>
+</section>
+
 </body>
+
 </html>

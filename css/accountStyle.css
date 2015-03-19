@@ -1,0 +1,112 @@
+
+#scaffold {
+}
+
+#title {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 45px;
+    font-family: 'Berkshire Swash', cursive;
+    padding: 10px;
+}
+
+#menuTitle {
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Arvo', serif;
+    padding: 10px;
+}
+
+#guru_icon {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#menu-dropdown {
+    top: 38px;
+    horiz-align: left;
+}
+
+#fabNavLeft {
+    background-color: #BBDEFB;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+}
+
+#fabNavLeft {
+    background-color: #BBDEFB;
+    position: absolute;
+    top: 50%;
+    right: 35%;
+}
+
+#txtFirstName {
+    position: relative;
+    top: 20px;
+}
+
+body {
+    background-color: #BBDEFB;
+}
+
+paper-tabs {
+    background-color: #7986cb;
+}
+
+core-item:hover {
+    background-color: #89bdff;
+}
+
+core-item.menuItem {
+    font-size: 20px;
+}
+
+html, body {
+    height: 100%;
+}
+
+
+core-pages {
+    width: 700px;
+    height: 1000px;
+    border: 1px solid black;
+    -webkit-user-select: none;
+    border-radius: 5px;
+}
+
+/*core-pages > div {*/
+/*display: flex;*/
+/*justify-content: center;*/
+/*align-items: center;*/
+/*border-radius: inherit;*/
+/*}*/
+
+core-pages.fancy {
+    border: none;
+    margin-left: 2em;
+}
+
+core-pages.fancy > .one {
+    background-color: red;
+}
+
+core-pages.fancy > .two {
+    background-color: green;
+}
+
+core-pages.fancy > .three {
+    background-color: blue;
+}
+
+core-pages.fancy > .four {
+    background-color: purple;
+}
+
+core-pages.fancy > .five {
+    background-color: deeppink;
+}
