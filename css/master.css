@@ -1,0 +1,45 @@
+
+
+#title {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 45px;
+    font-family: 'Berkshire Swash', cursive;
+    padding: 10px;
+}
+
+#menuTitle {
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Arvo', serif;
+    padding: 10px;
+}
+
+
+#menu-dropdown {
+    top: 38px;
+    horiz-align: left;
+}
+
+
+body {
+    background-color: #BBDEFB;
+}
+
+paper-tabs {
+    background-color: #7986cb;
+}
+
+core-item:hover {
+    background-color: #89bdff;
+}
+
+core-item.menuItem {
+    font-size: 20px;
+}
+
+core-item.menuItem.selected {
+    font-size: 20px;
+    background-color: #89bdff;
+}
