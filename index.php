@@ -42,10 +42,20 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!--  JQuery Import  -->
 
-</head>
+    <!--  PHP Import  -->
+    <script src="./php/"> </script>
+    <!--  PHP Import  -->
 
+</head>
 <body>
+
+<?php
+    include("./php/check_logged_in.php");
+?>
+
 <script src="js/initialize_master.js"></script>
+
+
 
 <core-scaffold id="scaffold">
     <core-header-panel navigation flex >

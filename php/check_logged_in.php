@@ -2,6 +2,6 @@
 
 session_start();
 
-if(!(isset($_SESSION['login']) && $_SESSION['login'] != '')) {
-    header("Location: login.html");
+if(!(isset($_SESSION['id_user']) && $_SESSION['id_user'] != '')) {
+    header("Location: ./login.php");
 }
