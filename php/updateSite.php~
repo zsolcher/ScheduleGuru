@@ -75,7 +75,7 @@ function getPrereqs(classID){
   			res = JSON.parse(xmlhttp.responseText);
   		}
   	}
-  	xmlhttp.open("GET","queryServer.php?request=prereqs&ClassID="+classID,true);
+  	xmlhttp.open("GET","queryServer.php?request=prereqs&ClassID="+classID,false);
   	xmlhttp.send();
   	return res;
 }
