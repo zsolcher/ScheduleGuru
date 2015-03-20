@@ -48,36 +48,37 @@
 	
 	$numOfRows = mysqli_num_rows($result);
 	if($numOfRows === 0){
-		echo "No results";
+		echo json_encode("0");
 	}else {
+		$toReturn = array();
 		if($request === $prereqs) {
-			$toReturn = array();
 			while($row = mysqli_fetch_assoc($result)){
 				array_push($toReturn,$row['Prereq']);
 			}
 			echo json_encode($toReturn);
 		}elseif($request === $classData) {
 			while($row = mysqli_fetch_assoc($result)){
-				print_r($row);
+				echo json_encode($row);
 			}
 		}elseif($request ===$sameAs) {
 			while($row = mysqli_fetch_assoc($result)){
-				echo $row['SameAs']." ";
+				array_push($toReturn,$row['SameAs']);				
 			}
+			echo json_encode($toReturn);
 		}elseif($request === $login) {
 			while($row = mysqli_fetch_assoc($result)){
 				echo json_encode($row);
 			}
 		}elseif($request === $classesTaken) {
 			while($row = mysqli_fetch_assoc($result)){
-				echo $row['ClassID']." ";
+				array_push($toReturn,$row['ClassID']);
 			}
+			echo json_encode($toReturn);
 		}elseif($request === $updateAccountSettings) {
-			print(mysqli_affected_rows($mysqli));
+			echo json_encode(mysqli_affected_rows($mysqli));
 		}elseif($request === $userData) {
 			$row = mysqli_fetch_assoc($result);
 			echo json_encode($row);
 		}
-		
 	}
 ?>

@@ -50,13 +50,21 @@ function testClassesTaken(){
 function testUpdateAccountSettings(){
 	sendQuery("request=updateAccount&UserID=740432&Major=Bio&Year=4&FirstName=Rob&LastName=Bierman");	
 }
+function testGetUserData(){
+	sendQuery("request=userData&UserID=740432");	
+}
+function testInjection(){
+	sendQuery("request=login&username=;drop table Users;&password=lololol");	
+}
 </script>
 	<input type="button" value="Test Prereqs" onclick="testPrereqs()"><br>
 	<input type="button" value="Test ClassData" onclick="testClassData()"><br>
 	<input type="button" value="Test SameAs" onclick="testSameAs()"><br>
 	<input type="button" value="Test Login" onclick="testLogin()"><br>
 	<input type="button" value="Test ClassesTaken" onclick="testClassesTaken()"><br>
-	<input type="button" value="Test UpdateAccountSettings" onclick="testUpdateAccountSettings()"><br>	
+	<input type="button" value="Test UpdateAccountSettings" onclick="testUpdateAccountSettings()"><br>
+	<input type="button" value="Test GetUserData" onclick="testGetUserData()"><br>
+	<input type="button" value="Test Injection" onclick="testInjection()"><br>
 <table id="tbl"></table>
 </body>
 </html>

@@ -42,4 +42,80 @@ function getUserData(userID){
   	xmlhttp.send();
 		
 }
+function getPrereqs(classID){
+	var xmlhttp;
+	if (window.XMLHttpRequest){
+		xmlhttp=new XMLHttpRequest();
+ 	}else{
+ 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+ 	}
+  	xmlhttp.onreadystatechange=function(){
+  		if(xmlhttp.readyState==4 && xmlhttp.status==200){
+  			return xmlhttp.responseText;
+  		}
+  	}
+  	xmlhttp.open("GET","queryServer.php?request=prereqs&ClassID="+classID,true);
+  	xmlhttp.send();
+}
+function getClassData(classID){
+	var xmlhttp;
+	if (window.XMLHttpRequest){
+		xmlhttp=new XMLHttpRequest();
+ 	}else{
+ 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+ 	}
+  	xmlhttp.onreadystatechange=function(){
+  		if(xmlhttp.readyState==4 && xmlhttp.status==200){
+  			return xmlhttp.responseText;
+  		}
+  	}
+  	xmlhttp.open("GET","queryServer.php?request=classData&ClassID="+classID,true);
+  	xmlhttp.send();
+}
+function classSameAs(classID){
+	var xmlhttp;
+	if (window.XMLHttpRequest){
+		xmlhttp=new XMLHttpRequest();
+ 	}else{
+ 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+ 	}
+  	xmlhttp.onreadystatechange=function(){
+  		if(xmlhttp.readyState==4 && xmlhttp.status==200){
+  			return xmlhttp.responseText;
+  		}
+  	}
+  	xmlhttp.open("GET","queryServer.php?request=sameAs&ClassID="+classID,true);
+  	xmlhttp.send();	
+}
+function classesTaken(userID){
+	var xmlhttp;
+	if (window.XMLHttpRequest){
+		xmlhttp=new XMLHttpRequest();
+ 	}else{
+ 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+ 	}
+  	xmlhttp.onreadystatechange=function(){
+  		if(xmlhttp.readyState==4 && xmlhttp.status==200){
+  			return xmlhttp.responseText;
+  		}
+  	}
+  	xmlhttp.open("GET","queryServer.php?request=classesTaken&UserID="+userID,true);
+  	xmlhttp.send();
+}
+
+function login(username,password){
+	var xmlhttp;
+	if (window.XMLHttpRequest){
+		xmlhttp=new XMLHttpRequest();
+ 	}else{
+ 		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+ 	}
+  	xmlhttp.onreadystatechange=function(){
+  		if(xmlhttp.readyState==4 && xmlhttp.status==200){
+  			return xmlhttp.responseText;
+  		}
+  	}
+  	xmlhttp.open("GET","queryServer.php?request=login&username="+username+"&password="+password,true);
+  	xmlhttp.send();
+}
 </script>
