@@ -60,8 +60,7 @@ function testLogin(){
   	document.getElementById("2").innerHTML = "";
 }
 function testClassesTaken(){
-	//sendQuery("request=classesTaken&UserID=740432");
-	arr = classesTaken("740432");
+	sendQuery("request=classesTaken&UserID=740432");
 	displayOutput();
 	document.getElementById("2").innerHTML = "";
 }

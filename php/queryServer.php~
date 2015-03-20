@@ -87,7 +87,7 @@
 			while($row = mysqli_fetch_assoc($result)){
 				array_push($toReturn,$row);
 			}
-			echo json_encode($toReturn);
+			echo json_encode($toReturn);;
 		}
 	}
 ?>
