@@ -27,26 +27,6 @@ core-pages.fancy {
     margin-left: 2em;
 }
 
-core-pages.fancy > .one {
-    background-color: red;
-}
-
-core-pages.fancy > .two {
-    background-color: green;
-}
-
-core-pages.fancy > .three {
-    background-color: blue;
-}
-
-core-pages.fancy > .four {
-    background-color: purple;
-}
-
-core-pages.fancy > .five {
-    background-color: deeppink;
-}
-
 .fabNavLeft {
     float:left;
     background-color: #00bbd3;
@@ -63,4 +43,8 @@ core-pages.fancy > .five {
 .page {
     position: absolute;
     background-color: #accbff;
+}
+
+#pageUploadTranscript {
+
 }

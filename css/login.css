@@ -1,0 +1,134 @@
+/*
+  ----------------- Document -----------------
+*/
+body {
+    background: rgba(88,153,219,1);
+    background: -moz-linear-gradient(-45deg, rgba(88,153,219,1) 0%, rgba(61,97,255,1) 74%, rgba(61,97,255,1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(88,153,219,1) 0%, rgba(61,97,255,1) 74%, rgba(61,97,255,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(88,153,219,1) 0%, rgba(61,97,255,1) 74%, rgba(61,97,255,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(88,153,219,1) 0%, rgba(61,97,255,1) 74%, rgba(61,97,255,1) 100%);
+    background: linear-gradient(135deg, rgba(88,153,219,1) 0%, rgba(61,97,255,1) 74%, rgba(61,97,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5899db', endColorstr='#3d61ff', GradientType=1 );
+}
+
+#title {
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 50px;
+    font-family: 'Berkshire Swash', cursive;
+    padding-bottom: 5px;
+}
+
+#loginArea {
+    background-color: #7986cb;
+
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-400px 0 0 -275px;
+    height: 550px;
+    width: 500px;
+
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    border: 10px solid #ffffff;
+    -webkit-box-shadow: 10px 10px 73px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 73px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 73px 0px rgba(0,0,0,0.75);
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+  ----------------- Text Inputs -----------------
+*/
+paper-input {
+    width: 80%;
+}
+
+paper-input-decorator {
+    max-width: 80%;
+}
+
+paper-input.narrow {
+    width: 150px;
+}
+
+.textInput /deep/ ::-webkit-input-placeholder {
+    color: white;
+}
+
+.textInput /deep/ ::-moz-placeholder {
+    color: white;
+}
+
+.textInput /deep/ :-ms-input-placeholder {
+    color: white;
+}
+
+.textInput /deep/ .label-text,
+.textInput /deep/ .error {
+    color: white;
+}
+
+.textInput /deep/ .unfocused-underline {
+    background-color: white;
+}
+
+.textInput[focused] /deep/ .floated-label .label-text {
+    color: white;
+}
+
+.textInput /deep/ .focused-underline {
+    background-color: #00e0ff;
+}
+
+.textInput.invalid /deep/ .floated-label .label-text,
+.textInput /deep/ .error {
+    color: #f06292;
+}
+
+.textInput.invalid /deep/ .focused-underline {
+    background-color: #f06292;
+}
+
+.textInput {
+    color: white;
+    padding: 20px;
+}
+
+/*
+  ----------------- Buttons -----------------
+*/
+paper-button[raised].loginButton {
+    margin: 20px;
+    background: #4285f4;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    width: 125px;
+    height: 45px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#btnLogin {
+    position: absolute;
+    top: 420px;
+    left: 70px;
+}
+
+#btnRegister {
+    position: absolute;
+    top: 420px;
+    right: 70px;
+}

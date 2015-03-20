@@ -1,51 +1,57 @@
 <?php
-    if ($_SERVER['SERVER_NAME'] != "dias11.cs.trinity.edu") {
-        echo "<p>You must access this page from on campus through dias11.</p>";
-        die ();
-    }
-?>
 
-<?php
-session_start();
 include("db_connect.php");
+session_start();
 
-try {
-    // Prepare SQL Query
-    $qry = "SELECT * FROM Users WHERE Email = :email AND Password = :password";
-    $stmt = $conn->prepare($qry);
+if ($_SERVER['SERVER_NAME'] != "dias11.cs.trinity.edu") {
+    echo "<p>You must access this page from on campus through dias11.</p>";
+    die ();
+}
 
-    // bind parameters
-    $user_email = trim($_POST['email']);
-    $user_password = trim($_POST['password']);
-    $stmt->bindParam(':email', $user_email);
-    $stmt->bindParam(':password', $user_password);
+echo "email: " . $_POST['login_email'] . ", password: " . $_POST['login_password'];
 
-    // Execute prepared statement
-    $stmt->execute();
+if(isset($_POST['login_email']) && isset($_POST['login_password'])) {
+    try {
+        // Prepare SQL Query
+        $qry = "SELECT * FROM Users WHERE Email = :email AND Password = :password";
+        $stmt = $conn->prepare($qry);
 
-    // Check if exactly one matching result
-    $noRows =$stmt->rowCount();
+        // bind parameters
+        $user_email = trim($_POST['login_email']);
+        $user_password = trim($_POST['login_password']);
+        $stmt->bindParam(':email', $user_email);
+        $stmt->bindParam(':password', $user_password);
 
-    if($noRows == 1) {
-        $topRow = $stmt->fetch();
+        // Execute prepared statement
+        $stmt->execute();
 
-        // Store session information
-        session_start();
-        $_SESSION['id_user']=$topRow[0];
-        $_SESSION['user_fname']=$topRow[1];
-        $_SESSION['user_lname']=$topRow[2];
-        $_SESSION['user_email']=$topRow[3];
+        // Check if exactly one matching result
+        $noRows =$stmt->rowCount();
 
-        //redirect to home page
-        header("location: ../index.php");
+        $return = array();
+        if($noRows == 1) {
+            $topRow = $stmt->fetch();
+
+            // Store session information
+            session_start();
+            $_SESSION['user_id']=$topRow[0];
+            $_SESSION['user_major']=$topRow[3];
+            $_SESSION['user_fname']=$topRow[5];
+            $_SESSION['user_lname']=$topRow[6];
+            $_SESSION['user_email']=$topRow[1];
+            $_SESSION['user_year']=$topRow[4];
+
+            $return["status"] = "success";
+            echo json_encode($return);
+
+        } else {
+            $return["status"] = "failure";
+            echo json_encode($return);
+        }
+
+        $conn = null;
+    } catch (PDOException $e) {
+        print "Error!: " . $e->getMessage() . "<br/>";
+        die();
     }
-    else {
-        echo "Was not able to login successfully";
-        header("location: ../login.php");
-    }
-
-    $conn = null;
-} catch (PDOException $e) {
-    print "Error!: " . $e->getMessage() . "<br/>";
-    die();
 }
