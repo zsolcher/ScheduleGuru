@@ -8,7 +8,7 @@
     <meta name="author" content="SitePoint">
 
     <!--  CSS/Fonts Imports  -->
-    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/build_schedule_area.css">
 
     <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
@@ -50,7 +50,7 @@
 <body>
 
 <?php
-    include("./php/check_logged_in.php");
+    //include("./php/check_logged_in.php");
 ?>
 
 <script src="js/initialize_master.js"></script>
@@ -92,7 +92,7 @@
 
     <div id="buildScheduleArea" unresolved fullbleed horizontal center center-justified layout>
         <core-pages class="fancy" selected="0">
-            <div class="page" id="page1">
+            <div class="page" id="pageUploadTranscript">
                 <paper-fab class="fabNavLeft" icon="chevron-left"></paper-fab>
                 one
                 <paper-fab class="fabNavRight" icon="chevron-right"> </paper-fab>

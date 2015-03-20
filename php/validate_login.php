@@ -40,7 +40,6 @@ try {
         header("location: ../index.php");
     }
     else {
-        echo "Was not able to login successfully";
         header("location: ../login.php");
     }
 
