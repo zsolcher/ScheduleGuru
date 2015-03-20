@@ -13,9 +13,11 @@ window.onload = function() {
         $("#accountSettingsArea").hide();
         $("#savedSchedulesArea").hide();
         $("#aboutUsArea").hide();
+        $("#calendarArea").hide();
     }
 
-    //Hide all areas other than home
+    //Create calendar then hide all areas other than home
+	createCalendar();
     hideAllAreas();
     $("#homeArea").show();
 
@@ -72,6 +74,20 @@ window.onload = function() {
         }
     );
 
+	$("#menuItemCalendar").on({
+			'click': function(){
+				hideAllAreas();
+				$("#calendarArea").show();
+			}
+		}
+	);
 
+	$("#accountCircle").on({
+			'click': function(){
+				hideAllAreas();
+				$("#accountSettingsArea").show();
+			}
+		}
+	);
 };
 

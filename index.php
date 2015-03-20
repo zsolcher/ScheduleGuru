@@ -49,12 +49,12 @@
 <body>
 
 <?php
-    include("./php/check_logged_in.php");
+   // include("./php/check_logged_in.php");
 ?>
 
 <script src="js/initialize_master.js"></script>
-
-
+<script src="js/calendar.js"></script>
+<iframe id="frmFileSchedule" src="schedule1.txt" onload="readSchedule();" style="display: none"></iframe>
 <core-scaffold id="scaffold">
     <core-header-panel navigation flex >
         <core-toolbar id="navheader" style="background: #4285f4;">
@@ -66,15 +66,15 @@
             <core-item  class="menuItem" id="menuItemSavedSchedules" icon="save" label="Saved Schedules"></core-item>
             <core-item  class="menuItem" id="menuItemAccountSettings" icon="settings" label="Account Settings"></core-item>
             <core-item  class="menuItem" id="menuItemAboutUs" icon="star" label="About Us"></core-item>
+            <core-item  class="menuItem" id="menuItemCalendar" icon="book" label="Calendar"></core-item>
         </core-menu>
     </core-header-panel>
 
     <div flex id="title" tool> Schedule Guru</div>
 
-    <paper-button tool>
+    <paper-button tool id="accountCircle">
         <core-icon icon="account-circle" style="width:50px; height:50px;"> </core-icon>
     </paper-button>
-
     <paper-tabs id="buildScheduleTabs" selected="0" main>
         <paper-tab>Upload Transcript</paper-tab>
         <paper-tab>Preferences</paper-tab>
@@ -142,7 +142,9 @@
     </div>
 
     <div id="accountSettingsArea">
-        Account Settings Area
+		<p> Username: </p>
+		<p> Password: </p>
+		<p> What else should be here? </p>
     </div>
 
     <div id="aboutUsArea">
@@ -158,6 +160,10 @@
             </center>
             </p>
     </div>
+
+	<div id="calendarArea">
+		<!-- The calendar is currently just showing a schedule from file -->
+	</div>
 
 </core-scaffold>
 
