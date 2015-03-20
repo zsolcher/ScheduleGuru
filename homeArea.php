@@ -10,6 +10,7 @@
     <!--  CSS/Fonts Imports  -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/build_schedule_area.css">
+    <link rel="stylesheet" href="css/homeArea.css">
 
     <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
     <!--  CSS/Fonts Imports  -->
