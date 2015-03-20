@@ -98,12 +98,12 @@ function classesTaken(userID){
   		if(xmlhttp.readyState==4 && xmlhttp.status==200){
   			return xmlhttp.responseText;
   		}
-  	}
+  	};
   	xmlhttp.open("GET","queryServer.php?request=classesTaken&UserID="+userID,true);
   	xmlhttp.send();
 }
 
-function login(username,password){
+function login(username, password){
 	var xmlhttp;
 	if (window.XMLHttpRequest){
 		xmlhttp=new XMLHttpRequest();
@@ -114,8 +114,11 @@ function login(username,password){
   		if(xmlhttp.readyState==4 && xmlhttp.status==200){
   			return xmlhttp.responseText;
   		}
-  	}
+  	};
   	xmlhttp.open("GET","queryServer.php?request=login&username="+username+"&password="+password,true);
   	xmlhttp.send();
 }
 </script>
+
+var ret = login(uid, pw);
+ret[];

@@ -31,7 +31,8 @@
 
 </head>
 <body>
-
+    <?php include './php/updateSite.php';
+    ?>
 
     <div id="loginArea">
         <img src="./imgs/guru-icon.png">
