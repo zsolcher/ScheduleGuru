@@ -2,11 +2,13 @@
   ----------------- Document -----------------
 */
 body {
-    background: #a7cfdf; /* Old browsers */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a7cfdf), color-stop(100%,#23538a)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #a7cfdf 0%,#23538a 100%); /* Chrome10+,Safari5.1+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7cfdf', endColorstr='#23538a',GradientType=0 ); /* IE6-9 */
-
+    background: rgba(88,153,219,1);
+    background: -moz-linear-gradient(-45deg, rgba(88,153,219,1) 0%, rgba(61,97,255,1) 74%, rgba(61,97,255,1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(88,153,219,1) 0%, rgba(61,97,255,1) 74%, rgba(61,97,255,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(88,153,219,1) 0%, rgba(61,97,255,1) 74%, rgba(61,97,255,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(88,153,219,1) 0%, rgba(61,97,255,1) 74%, rgba(61,97,255,1) 100%);
+    background: linear-gradient(135deg, rgba(88,153,219,1) 0%, rgba(61,97,255,1) 74%, rgba(61,97,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5899db', endColorstr='#3d61ff', GradientType=1 );
 }
 
 #title {
@@ -20,11 +22,14 @@ body {
 
 #loginArea {
     background-color: #7986cb;
-    position: absolute;
-    top: 5%;
-    left: 30%;
-    height: 440px;
+
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-400px 0 0 -275px;
+    height: 550px;
     width: 500px;
+
     border-radius: 20px 20px 20px 20px;
     -moz-border-radius: 20px 20px 20px 20px;
     -webkit-border-radius: 20px 20px 20px 20px;
@@ -32,6 +37,14 @@ body {
     -webkit-box-shadow: 10px 10px 73px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 73px 0px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 73px 0px rgba(0,0,0,0.75);
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*
@@ -110,12 +123,12 @@ paper-button[raised].loginButton {
 
 #btnLogin {
     position: absolute;
-    top: 350px;
+    top: 420px;
     left: 70px;
 }
 
 #btnRegister {
     position: absolute;
-    top: 350px;
+    top: 420px;
     right: 70px;
 }

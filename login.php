@@ -26,7 +26,6 @@
     <!--  JavaScript/JQuery Import  -->
     <script src="js/login.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="http://malsup.github.com/jquery.form.js"></script>
     <!--  JavaScript/JQuery Import  -->
 
 
@@ -35,15 +34,19 @@
 
 
     <div id="loginArea">
-
+        <img src="./imgs/guru-icon.png">
         <h1 id="title">Schedule Guru</h1>
+
+        <div id="loginMessage">
+
+        </div>
         <form id="loginForm" action="./php/validate_login.php" method="post">
             <paper-input-decorator class="textInput" id="inputEmail" name="login_email" label="email address" floatingLabel>
-                <input is="core-input"id="txtEmail">
+                <input is="core-input"id="txtEmail" value="rbierman@trinity.edu">
             </paper-input-decorator>
 
             <paper-input-decorator class="textInput" id="inputPassword" name="login_password" label="password"  floatingLabel>
-                <input is="core-input" id="txtPassword" type="password">
+                <input is="core-input" id="txtPassword" type="password" value="lololol">
             </paper-input-decorator>
 
             <paper-button raised class="loginButton" id="btnLogin" >Login</paper-button>
@@ -54,13 +57,6 @@
 
     <paper-toast id="toastSubmit" text="Checking login."></paper-toast>
 
-    <script>
-        $(document).ready(function() {
-            $('loginForm').ajaxForm(function() {
-                $('')
-            });
-        });
-    </script>
 
 </body>
 </html>
