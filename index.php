@@ -54,7 +54,6 @@
 
 <script src="js/initialize_master.js"></script>
 <script src="js/calendar.js"></script>
-<iframe id="frmFileSchedule" src="schedule1.txt" onload="readSchedule();" style="display: none"></iframe>
 <core-scaffold id="scaffold">
     <core-header-panel navigation flex >
         <core-toolbar id="navheader" style="background: #4285f4;">
@@ -149,7 +148,11 @@
 
 	<div id="calendarArea">
 		<!-- The calendar is currently just showing a schedule from file -->
-		<button onclick="getClassData('42570')">No class yet</button>
+		<input id="addClassField" style="text"> </input>
+		<button onclick="getClassData(addClassField.value);addCalendarClass(result);">Add class by ID</button>
+		<p>(Examples: 42258, 42570, 42241, 42569)</p><br />
+		<input id="removeClassField" style="text"> </input>
+		<button onclick="removeCalendarClass(removeClassField.value)">Remove result from calendar</button>
 	</div>
 
 </core-scaffold>
