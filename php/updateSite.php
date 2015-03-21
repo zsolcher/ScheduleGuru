@@ -16,7 +16,7 @@ function sendQuery(data){
   			result = JSON.parse(xmlhttp.responseText);
   		}
   	}
-  	xmlhttp.open("GET","queryServer.php?"+data,false);
+  	xmlhttp.open("GET","./php/queryServer.php?"+data,false);
   	xmlhttp.send();
 }
 function updateAccountSettings(userID,Major,Year,FirstName,LastName){

@@ -149,6 +149,7 @@
 
 	<div id="calendarArea">
 		<!-- The calendar is currently just showing a schedule from file -->
+		<button onclick="getClassData('42570')">No class yet</button>
 	</div>
 
 </core-scaffold>
