@@ -129,9 +129,9 @@
     </div>
 
     <div id="accountSettingsArea">
-		<p> Username: </p>
-		<p> Password: </p>
-		<p> What else should be here? </p>
+		<script type="text/javascript">
+    		$( "#accountSettingsArea" ).load( "accountSettingsArea.php" );
+    	</script>
     </div>
 
     <div id="aboutUsArea">
