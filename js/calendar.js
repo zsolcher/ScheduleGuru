@@ -17,7 +17,7 @@ var fontBase = 100;
 var backgroundColor = "#EEEEEE";
 
 var courseArray = new Array();
-var canvas;
+var canvas = null;
 var ctx;
 
 window.setInterval(function(){ drawLoop(); }, updateEvery);
@@ -26,7 +26,11 @@ function updateMe(){
 	document.getElementById("state").innerHTML = "woo";
 }
 
-function drawLoop(){updateCanvas();}
+function drawLoop() {
+	if(canvas!=null){
+			updateCanvas();
+	}
+}
 
 function loadSchedule(scheduleNum){
 	deleteCanvas();

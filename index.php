@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Home</title>
     <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="2011-08-24" >
+    <meta name="author" content="2012-08-22" >
 
     <!--  CSS/Fonts Imports  -->
     <link rel="stylesheet" href="css/index.css">
@@ -42,15 +42,15 @@
     <!--  JQuery Import  -->
 
     <!--  PHP Import  -->
-    <script src="./php/"> </script>
+    <?php
+    	//include("./php/check_logged_in.php");
+    	include("./php/updateSite.php");
+	 ?>
     <!--  PHP Import  -->
 
 </head>
-<body>
 
-<?php
-   // include("./php/check_logged_in.php");
-?>
+<body>
 
 <script src="js/initialize_master.js"></script>
 <script src="js/calendar.js"></script>
