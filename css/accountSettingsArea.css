@@ -33,13 +33,6 @@ body {
 	*/
 }
 
-img {
-    height: 100px;
-    width: 100px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 /*
   ----------------- Text Inputs -----------------
@@ -102,7 +95,7 @@ paper-input.narrow {
 /*
   ----------------- Buttons -----------------
 */
-paper-button[raised].loginButton {
+paper-button[raised].acctButton {
     margin: 20px;
     background: #4285f4;
     color: #fff;
@@ -115,14 +108,9 @@ paper-button[raised].loginButton {
     vertical-align: middle;
 }
 
-#btnLogin {
+#btnAcct {
     position: absolute;
     top: 420px;
     left: 70px;
 }
 
-#btnRegister {
-    position: absolute;
-    top: 420px;
-    right: 70px;
-}

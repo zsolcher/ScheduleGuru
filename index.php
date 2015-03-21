@@ -125,7 +125,9 @@
     </div>
 
     <div id="savedSchedulesArea">
-        Saved Schedules Area
+        <script type="text/javascript">
+    		$( "#savedSchedulesArea" ).load( "savedSchedulesArea.php" );
+    	</script>
     </div>
 
     <div id="accountSettingsArea">

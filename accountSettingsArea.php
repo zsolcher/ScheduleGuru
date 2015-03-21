@@ -49,7 +49,7 @@
             </paper-input-decorator>
 
             <paper-input-decorator class="textGrade" id="inputGrade" name="acct_grade" label="Grade"  floatingLabel>
-                <input is="core-input" id="txtGrade"  value="">
+                <input is="core-input" id="txtGrade" value="">
             </paper-input-decorator>
 			
             <paper-input-decorator class="textInput" id="inputEmail" name="login_email" label="email address" floatingLabel>
