@@ -1,16 +1,14 @@
 </html>
 
 <style>
-body {
+p{
     background-color: linen;
 }
 h1 {
     color: maroon;
-    margin-left: 40px;
 } 
 </style>
 
-<body>
         <center>
 			<h1>A Letter to the User</h1>
         </center>
@@ -42,5 +40,4 @@ h1 {
 				
 			</h2>
         </p>
-</body>
 </html>
