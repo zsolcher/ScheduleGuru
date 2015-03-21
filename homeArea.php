@@ -1,6 +1,18 @@
 </html>
+
+<style>
+body {
+    background-color: linen;
+}
+h1 {
+    color: maroon;
+    margin-left: 40px;
+} 
+</style>
+
+
         <center>
-            Welcome to ScheduleGuru!
+			<h1>Welcome to ScheduleGuru!</h1>
         </center>
         <hr>
         <p>
@@ -13,7 +25,7 @@
             Use the left "<" and right ">" buttons to navigate through the different stages.
             You may also click on any point of the progress bar to go back to a previous section.
             Have fun scheduling!
-
+<br>
             P.S. Please email us with any feedback :)
         </p>
 </html>
