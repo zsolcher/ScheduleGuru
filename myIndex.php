@@ -10,7 +10,6 @@
     <!--  CSS/Fonts Imports  -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/build_schedule_area.css">
-	<link rel="stylesheet" href="css/accountSettingsArea.css">
 
     <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
     <!--  CSS/Fonts Imports  -->
@@ -21,7 +20,6 @@
     <!--  Polymer Imports  -->
     <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
     <link rel="import" href="bower_components/core-menu/core-menu.html">
-	<link rel="import" href="bower_components/core-selector/core-selector.html">
     <link rel="import" href="bower_components/core-item/core-item.html">
     <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
     <link rel="import" href="bower_components/core-drawer-panel/core-drawer-panel.html">
@@ -34,7 +32,6 @@
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-fab/paper-fab.html">
     <link rel="import" href="bower_components/paper-menu-button/paper-menu-button.html">
-	<link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
     <link rel="import" href="bower_components/paper-item/paper-item.html">
     <link rel="import" href="bower_components/paper-dropdown/paper-dropdown.html">
     <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
@@ -128,21 +125,27 @@
     </div>
 
     <div id="savedSchedulesArea">
-        <script type="text/javascript">
-    		$( "#savedSchedulesArea" ).load( "savedSchedulesArea.php" );
-    	</script>
+        Saved Schedules Area
     </div>
 
     <div id="accountSettingsArea">
-		<script type="text/javascript">
-    		$( "#accountSettingsArea" ).load( "accountSettingsArea.php" );
-    	</script>
+		<p> Username: </p>
+		<p> Password: </p>
+		<p> What else should be here? </p>
     </div>
 
     <div id="aboutUsArea">
-        <script type="text/javascript">
-    		$( "#aboutUsArea" ).load( "aboutUsArea.php" );
-    	</script>
+            <p style="background:blue; opacity:0.8;">
+            <center style="font-size: 20px; font-family:cursive, verdana;">
+                Our story begin many many days ago, when we were first assigned to this project. We took this journey in an attempt to improve our current model of TigerPaws -- which is a terrible, archiac way of scheduling classes.
+                <br>
+                <br> Meet the Team:
+                <br>
+                <table width="500px" height="100%" border="2" color=white>
+                    <tr><td><img src="imgs/rb.jpeg" alt="Rob Bierman" /></td><td>Rob Bierman<br><br>Our fearless hobbit</td></tr><tr><td><img src="imgs/kj.jpeg" alt="Kendrick James" /></td><td>Kendrick James<br><br>No description needed.</td></tr><tr><td><img src="imgs/ll.jpeg" alt="Lu Liu" /></td><td>Lu Liu<br><br>Need to figure out how to crop pics</td></tr><tr><td><img src="imgs/co.jpeg" alt="Caleb Olson" /></td><td>Caleb Olson<br><br>Where's the Algorithm?!</td></tr><tr><td><img src="imgs/zs.jpeg" alt="Zach Solcher" /></td><td>Zach Solcher<br><br>Webmaster</td></tr>
+                </table>
+            </center>
+            </p>
     </div>
 
 	<div id="calendarArea">
@@ -153,12 +156,35 @@
 		<input id="removeClassField" style="text"> </input>
 		<button onclick="removeCalendarClass(removeClassField.value)">Remove result from calendar</button>
 		<button onclick="addClassTableToDiv('#calendarArea','testTable');">Add a class table</button>
-		<button onclick="displayTable('testTable');">Display testTable</button>
-		<button onclick="addClassToTableObject('testTable',result);">Add 'result' to table</button><br /><br />
+		<button onclick="addClassToTable('testTable',result);">Add 'result' to table</button>
 
-		<input id="departmentField" style="text"> </input>
-		<button onclick="fillDepartmentTable('#calendarArea',departmentField.value);">Fill in whole department table</button>
+			<table id="majorCourseTable" border="1">
+				<tr>
+					<td> </td>
+					<td><b>Class Name</b></td>
+					<td><b>Department</b></td>
+					<td><b>Number</b></td>
+					<td><b>Section</b></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" onclick="doSomething(this);" name="class1" value="wanted"></td>
+					<td>className</td>
+					<td>department</td>
+					<td>number</td>
+					<td>section</td>
+				</tr>
+			</table>
 
+		<script>
+			function doSomething(checkBox){
+				if(checkBox.checked){
+					alert("is checked");
+				}
+				else{
+					alert("is not checked");
+				}
+			}
+		</script>
 	</div>
 
 </core-scaffold>

@@ -2,6 +2,21 @@
 var allTables = new Array();
 var headerValues = ["__","Name","Department","Number","Section","Prof","Building","RoomNum","Days","StartTime","EndTime","Notes"];
 
+function fillDepartmentTable(divName,dept){
+	var tableID = 'DepartmentTable:'+dept;
+	if(fetchTableObjectByID(tableID) == null){
+		getAllDepartmentClasses(dept);
+		if(result != "0"){
+			addClassTableToDiv(divName,tableID);
+			for(var i = 0; i < result.length; ++i){
+				addClassToTableObject(tableID,result[i]);
+			}
+			displayTable(tableID);
+		}
+	}
+}
+
+
 function addClassTableToDiv(divName,tableID){
 	var rowData = new Array();
 	rowData.push(headerValues);
@@ -60,7 +75,7 @@ function addClassRow(tableID,classToAdd){
 		var newRow = table.insertRow();
 		var checkBox = document.createElement("input");
 		checkBox.type = "checkbox";
-		checkBox.checked = true;
+		checkBox.checked = false;
 		checkBox.id = "tableID:"+tableID+":row:"+(numRows+1);
 		checkBoxCell = newRow.insertCell();
 		checkBoxCell.style.border = "1px solid black";
@@ -114,5 +129,6 @@ function fetchTableObjectByID(tableID){
 	}
 
 	if(found) return allTables[i];
+	else return null;
 }
 

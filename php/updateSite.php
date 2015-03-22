@@ -40,7 +40,9 @@ function classSameAs(classID){
 function classesTaken(userID){
   	sendQuery("request=classesTaken&UserID="+userID);
 }
-
+function getAllDepartmentClasses(department){
+	sendQuery("request=getAllDepartment&dpt="+department);
+}
 function login(username,password){
   	sendQuery("request=login&username="+username+"&password="+password);
 }
