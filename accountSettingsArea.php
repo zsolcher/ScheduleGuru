@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
-<body>
-    <div id="accountSettingsArea">
-		
+		<h1 id="title">Account Settings</h1>
         <form id="accountSettingsForm" action="" method="post">
+			<center>
+			
 			<paper-input-decorator class="textInput" id="inputFname" name="acct_fname" label="First Name" floatingLabel>
                 <input is="core-input"id="txtFname" value="">
             </paper-input-decorator>
-
+			
+			<br>
+			<br>
             <paper-input-decorator class="textInput" id="inputLname" name="acct_lname" label="Last Name"  floatingLabel>
                 <input is="core-input" id="txtLname" value="">
             </paper-input-decorator>
 			
+			<br>
+			<br>
 			<!--
 			<paper-input-decorator class="textInput" id="inputMajor" name="acct_major" label="Major" floatingLabel>
                 <input is="core-input"id="txtMajor" value="">
@@ -34,6 +38,7 @@
 				</paper-dropdown>
 			</paper-dropdown-menu>
 
+			<br>
 			<!--
             <paper-input-decorator class="textGrade" id="inputGrade" name="acct_grade" label="Grade"  floatingLabel>
                 <input is="core-input" id="txtGrade" value="">
@@ -52,19 +57,22 @@
 				</paper-dropdown>
 			</paper-dropdown-menu>
 						
-
+			<br>
 			
             <paper-input-decorator class="textInput" id="inputEmail" name="login_email" label="email address" floatingLabel>
                 <input is="core-input"id="txtEmail" value="">
             </paper-input-decorator>
 
+			<br>
+			<br>
+			
             <paper-input-decorator class="textInput" id="inputPassword" name="login_password" label="password"  floatingLabel>
                 <input is="core-input" id="txtPassword" type="password" value="">
             </paper-input-decorator>
-
+				</center>
+			<br>
             <paper-button raised class="acctButton" id="btnAcct" >Change Settings</paper-button>
+			
         </form>
 
-    </div>
-	</body>
 </html>
