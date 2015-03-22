@@ -10,11 +10,11 @@
     <!--  CSS/Fonts Imports  -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/build_schedule_area.css">
-	
-	<!--TODO-->
-	<link rel="stylesheet" href="css/accountSettingsArea.css">
 
-    <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
+	<!--TODO-->
+	<link rel="stylesheet" href="css/accountSettingsArea.css">   
+
+	<link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
     <!--  CSS/Fonts Imports  -->
 
     <!-- 1. Load webcomponents.min.js for polyfill support. -->
@@ -149,6 +149,7 @@
 
 	<div id="calendarArea">
 		<!-- The calendar is currently just showing a schedule from file -->
+		<!--
 		<input id="addClassField" style="text"> </input>
 		<button onclick="getClassData(addClassField.value);addCalendarClass(result);">Add class by ID</button>
 		<p>(Examples: 42258, 42570, 42241, 42569)</p><br />
@@ -157,8 +158,8 @@
 		<button onclick="addClassTableToDiv('#calendarArea','testTable');">Add a class table</button>
 		<button onclick="displayTable('testTable');">Display testTable</button>
 		<button onclick="addClassToTableObject('testTable',result);">Add 'result' to table</button><br /><br />
-
-		<input id="departmentField" style="text"> </input>
+		-->
+		<input id="departmentField" style="text" value="CSCI"> </input><br />
 		<button onclick="fillDepartmentTable('#calendarArea',departmentField.value);">Fill in whole department table</button>
 
 	</div>

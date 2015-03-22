@@ -4,12 +4,14 @@ var widthFrac = 0.75;
 var heightFrac = 0.5;
 var minWidth = 200;
 var minHeight = 400;
+var maxWidth = 600;
+var maxHeight = 600;
 var minWidthToHeightRatio = 0.8;
 var numDays = 5;
 var classToDayWidthRatio = (10.0/10.0);
 var dayHeightRatio = (4.0/5.0);
 var daysArray = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-var colorsArray = ["#4585f2","#c0c0c0","#008000","#0000ff","#ff0000","#051153","#8000ff","#ffa500","#ff6666","#b0e0e6"];
+var colorsArray = ["#4285f4","#bbdefb","#7986cb","#89bdff","#00bbd3","#accbff","#5899db","#3d61ff","#00e0ff","#f06292","#4585f2","#c0c0c0","#008000","#0000ff","#ff0000","#051153","#8000ff","#ffa500","#ff6666","#b0e0e6"];
 var earliestStart = 8;
 var latestEnd = 18;
 var fontSize = 2;
@@ -83,8 +85,11 @@ function updateCanvas(){
 	var currHeight = document.getElementById("calendarArea").offsetHeight*heightFrac;
 
 	if(currWidth < minWidth) currWidth = minWidth;
+	else if(currWidth > maxWidth) currWidth = maxWidth;
+
 	if(currHeight < minHeight) currHeight = minHeight;
-	
+	else if(currHeight > maxHeight) currHeight = maxHeight;
+
 	if(currWidth/currHeight < minWidthToHeightRatio){
 		canvas.width = currWidth;
 		canvas.height = currWidth/minWidthToHeightRatio;
