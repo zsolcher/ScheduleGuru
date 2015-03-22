@@ -54,6 +54,8 @@
 
 <script src="js/initialize_master.js"></script>
 <script src="js/calendar.js"></script>
+<script src="js/buildClassTable.js"></script>
+
 <core-scaffold id="scaffold">
     <core-header-panel navigation flex >
         <core-toolbar id="navheader" style="background: #4285f4;">
@@ -123,7 +125,7 @@
     </div>
 
     <div id="savedSchedulesArea">
-		<script type="text/javascript">
+        <script type="text/javascript">
     		$( "#savedSchedulesArea" ).load( "savedSchedulesArea.php" );
     	</script>
     </div>
@@ -155,6 +157,36 @@
 		<p>(Examples: 42258, 42570, 42241, 42569)</p><br />
 		<input id="removeClassField" style="text"> </input>
 		<button onclick="removeCalendarClass(removeClassField.value)">Remove result from calendar</button>
+		<button onclick="addClassTableToDiv('#calendarArea','testTable');">Add a class table</button>
+		<button onclick="addClassToTable('testTable',result);">Add 'result' to table</button>
+
+			<table id="majorCourseTable" border="1">
+				<tr>
+					<td> </td>
+					<td><b>Class Name</b></td>
+					<td><b>Department</b></td>
+					<td><b>Number</b></td>
+					<td><b>Section</b></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" onclick="doSomething(this);" name="class1" value="wanted"></td>
+					<td>className</td>
+					<td>department</td>
+					<td>number</td>
+					<td>section</td>
+				</tr>
+			</table>
+
+		<script>
+			function doSomething(checkBox){
+				if(checkBox.checked){
+					alert("is checked");
+				}
+				else{
+					alert("is not checked");
+				}
+			}
+		</script>
 	</div>
 
 </core-scaffold>
