@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-
+<body>
     <div id="accountSettingsArea">
+		
         <form id="accountSettingsForm" action="" method="post">
 			<paper-input-decorator class="textInput" id="inputFname" name="acct_fname" label="First Name" floatingLabel>
                 <input is="core-input"id="txtFname" value="">
@@ -60,11 +61,10 @@
             <paper-input-decorator class="textInput" id="inputPassword" name="login_password" label="password"  floatingLabel>
                 <input is="core-input" id="txtPassword" type="password" value="">
             </paper-input-decorator>
-			<center>
+
             <paper-button raised class="acctButton" id="btnAcct" >Change Settings</paper-button>
-			</center> 
         </form>
 
     </div>
-
+	</body>
 </html>
