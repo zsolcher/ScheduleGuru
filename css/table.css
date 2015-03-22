@@ -3,11 +3,11 @@ table, td, th {
 }
 
 table {
-    width: 100%;
+    width: 90%;
 }
 
 th {
-    text-align: left; 
+    text-align: center; 
 	background-color: #7986cb; 
 	color: white; 
 }
