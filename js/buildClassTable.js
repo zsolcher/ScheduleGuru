@@ -28,7 +28,9 @@ function addClassTableToDiv(divName,tableID){
 function instantiateTable(divName,tableID){
 	var tableToAdd = document.createElement("table");
 	tableToAdd.id = tableID;
-	tableToAdd.style.border = "1px solid black";
+	tableToAdd.style.border = "1px solid #7986cb";
+	tableToAdd.style.width = "100%";
+	tableToAdd.style.textAlign = "left";
 	tableToAdd.align = "center";
 	$(divName).append(tableToAdd);
 }
@@ -39,7 +41,11 @@ function displayTable(tableID){
 	if(tableObject != undefined){
 		var table = document.getElementById(tableObject['id']);
 		var rowDataArray = tableObject['classes'];
-		var headerRow = table.insertRow();
+		var header = table.createTHead();
+		var headerRow = header.insertRow(0);
+		headerRow.style.textAlign = "center";
+		headerRow.style.backgroundColor = "#7986cb";
+		headerRow.style.color = "#ffffff";
 		fillTableRow(headerRow,rowDataArray[0]);
 
 		for(var i = 1; i < rowDataArray.length; ++i){
@@ -79,7 +85,7 @@ function addClassRow(tableID,classToAdd){
 		checkBox.id = "tableID:"+tableID+":row:"+(numRows+1);
 		checkBox.onclick = function(){testCheckBoxes(checkBox);};
 		checkBoxCell = newRow.insertCell();
-		checkBoxCell.style.border = "1px solid black";
+		checkBoxCell.style.border = "1px solid #7986cb";
 		checkBoxCell.appendChild(checkBox);
 
 		var rowData = new Array();
@@ -117,7 +123,7 @@ function fillTableRow(tableRow,values){
 	for(var i = 0; i < values.length; ++i){
 		var currentCell = tableRow.insertCell();
 		currentCell.appendChild(document.createTextNode(values[i]));
-		currentCell.style.border = "1px solid black";
+		currentCell.style.border = "1px solid #7986cb";
 	}
 }
 
