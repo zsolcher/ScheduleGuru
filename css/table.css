@@ -1,5 +1,5 @@
 table, td, th {
-    border: 1px solid black;
+    border: 1px solid #7986cb;
 }
 
 table {
@@ -8,5 +8,6 @@ table {
 
 th {
     text-align: left; 
-	
+	background-color: #7986cb; 
+	color: white; 
 }

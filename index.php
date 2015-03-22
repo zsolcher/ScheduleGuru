@@ -10,6 +10,7 @@
     <!--  CSS/Fonts Imports  -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/build_schedule_area.css">
+	<link rel="stylesheet" href="css/table.css">
 
 	<!--TODO-->
 	<link rel="stylesheet" href="css/accountSettingsArea.css">   

@@ -7,39 +7,43 @@
 		<br>
 		<table width="500px" height="100%" border="2" color=white>
 			<tr>
+				<th>Member</th>
+				<th>Responsiblity</th>
+			</tr>
+			<tr>
 				<td><img src="imgs/rb.jpeg" alt="Rob Bierman" />
 				</td>
-				<td>Rob Bierman
+				<td>Rob Bierman: Algorithms
 					<br>
 					<br>Our fearless hobbit</td>
 			</tr>
 			<tr>
 				<td><img src="imgs/kj.jpeg" alt="Kendrick James" />
 				</td>
-				<td>Kendrick James
+				<td>Kendrick James: Database
 					<br>
 					<br>No description needed.</td>
 			</tr>
 			<tr>
 				<td><img src="imgs/ll.jpeg" alt="Lu Liu" />
 				</td>
-				<td>Lu Liu
+				<td>Lu Liu: Web Develop
 					<br>
 					<br>Need to figure out how to crop pics</td>
 			</tr>
 			<tr>
 				<td><img src="imgs/co.jpeg" alt="Caleb Olson" />
 				</td>
-				<td>Caleb Olson
+				<td>Caleb Olson: Algorithms
 					<br>
 					<br>Where's the Algorithm?!</td>
 			</tr>
 			<tr>
 				<td><img src="imgs/zs.jpeg" alt="Zach Solcher" />
 				</td>
-				<td>Zach Solcher
+				<td>Zach Solcher: Web Develop
 					<br>
-					<br>Webmaster</td>
+					<br>Face of Polymer</td>
 			</tr>
 		</table>
 	</center>
