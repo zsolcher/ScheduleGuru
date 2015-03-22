@@ -1,40 +1,7 @@
 <!DOCTYPE html>
 <html>
- <title>Account Settings</title>
-
-    <!-- CSS Import-->
-    <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/accountSettingsArea.css">
-    <!-- CSS Import-->
-
-    <!-- Polymer Imports  -->
-    <!-- 1. Load webcomponents.min.js for polyfill support. -->
-    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
-	<link rel="import" href="bower_components/core-menu/core-menu.html">
-
-    <link rel="import" href="bower_components/paper-input/paper-input-decorator.html">
-    <link rel="import" href="bower_components/paper-input/paper-autogrow-textarea.html">
-    <link rel="import" href="bower_components/paper-input/paper-input.html">
-    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
-    <link rel="import" href="bower_components/paper-button/paper-button.html">
-    <link rel="import" href="bower_components/paper-fab/paper-fab.html">
-    <link rel="import" href="bower_components/paper-toast/paper-toast.html">
-	<link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
-	<link rel="import" href="bower_components/paper-dropdown/paper-dropdown.html">
-	<link rel="import" href="bower_components/paper-item/paper-item.html">
-    <!-- Polymer Imports  -->
-	
-    <!--  JavaScript/JQuery Import  -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <!--  JavaScript/JQuery Import  -->
-
-
-</head>
-<body>
 
     <div id="accountSettingsArea">
-
         <form id="accountSettingsForm" action="" method="post">
 			<paper-input-decorator class="textInput" id="inputFname" name="acct_fname" label="First Name" floatingLabel>
                 <input is="core-input"id="txtFname" value="">
@@ -100,6 +67,4 @@
 
     </div>
 
-    
-</body>
 </html>

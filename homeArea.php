@@ -1,9 +1,7 @@
 </html>
 
 <style>
-p{
-    background-color: linen;
-}
+
 h1 {
     color: maroon;
 } 

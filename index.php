@@ -10,6 +10,7 @@
     <!--  CSS/Fonts Imports  -->
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/build_schedule_area.css">
+	<link rel="stylesheet" href="css/accountSettingsArea.css">
 
     <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
     <!--  CSS/Fonts Imports  -->
@@ -20,6 +21,7 @@
     <!--  Polymer Imports  -->
     <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
     <link rel="import" href="bower_components/core-menu/core-menu.html">
+	<link rel="import" href="bower_components/core-selector/core-selector.html">
     <link rel="import" href="bower_components/core-item/core-item.html">
     <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
     <link rel="import" href="bower_components/core-drawer-panel/core-drawer-panel.html">
@@ -32,6 +34,7 @@
     <link rel="import" href="bower_components/paper-button/paper-button.html">
     <link rel="import" href="bower_components/paper-fab/paper-fab.html">
     <link rel="import" href="bower_components/paper-menu-button/paper-menu-button.html">
+	<link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
     <link rel="import" href="bower_components/paper-item/paper-item.html">
     <link rel="import" href="bower_components/paper-dropdown/paper-dropdown.html">
     <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
