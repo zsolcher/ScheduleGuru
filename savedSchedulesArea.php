@@ -3,7 +3,7 @@
 
     <div id="savedSchedulesArea">
      	<center>
-			<paper-dropdown-menu label = "View Schedule">
+			<paper-dropdown-menu label = "View Past Class Schedules">
 				<paper-dropdown class = "dropdown">
 					<core-menu class="menu">
 						<paper-item>Spring 2013</paper-item>

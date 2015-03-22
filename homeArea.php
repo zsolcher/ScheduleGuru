@@ -2,17 +2,23 @@
 
 <style>
 
-h1 {
-    color: maroon;
+h1,h3 {
+	font-family:cursive, verdana;
 } 
-</style>
 
+#letterArea{
+	background-image: url("imgs/parchment.jpg");
+	background-size: cover; 
+
+}
+</style>
+<div id="letterArea">
         <center>
 			<h1>A Letter to the User</h1>
         </center>
         <hr>
         <p>
-            <h2>
+            <h3>
 				Dear User,
 				<br>
 				<br>
@@ -36,6 +42,7 @@ h1 {
 				<br>
             P.S. Please email us with any feedback :)
 				
-			</h2>
+			</h3>
         </p>
+</div>
 </html>
