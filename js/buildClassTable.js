@@ -3,7 +3,7 @@ var allTables = new Array();
 var headerValues = ["__","Name","Department","Number","Section","Prof","Building","RoomNum","Days","StartTime","EndTime","Notes"];
 
 function fillDepartmentTable(divName,dept){
-	var tableID = 'DepartmentTable:'+dept;
+	var tableID = 'DepartmentTable-'+dept;
 	if(fetchTableObjectByID(tableID) == null){
 		getAllDepartmentClasses(dept);
 		if(result != "0"){
@@ -77,6 +77,7 @@ function addClassRow(tableID,classToAdd){
 		checkBox.type = "checkbox";
 		checkBox.checked = false;
 		checkBox.id = "tableID:"+tableID+":row:"+(numRows+1);
+		checkBox.onclick = function(){testCheckBoxes(checkBox);};
 		checkBoxCell = newRow.insertCell();
 		checkBoxCell.style.border = "1px solid black";
 		checkBoxCell.appendChild(checkBox);
@@ -130,5 +131,25 @@ function fetchTableObjectByID(tableID){
 
 	if(found) return allTables[i];
 	else return null;
+}
+
+function testCheckBoxes(checkBox){
+	//checkBox ID is in the form tableID:[tID]:row:[row_num]
+	//so the last element of splitID will be the table row
+	//Need to subtract 1 from rowNum because of the header
+	var checkBoxID = checkBox.id;
+	var splitID = checkBoxID.split(":");
+	var tableID = splitID[1];
+	var rowNum = splitID[splitID.length-1]-1;
+	var tableObject = fetchTableObjectByID(tableID);
+	if(tableObject != null){
+		var classData = tableObject['classes'][rowNum];
+		if(checkBox.checked){
+			addCalendarClass(classData);
+		}
+		else{
+			removeCalendarClass(classData['ClassID']);
+		}
+	}
 }
 
