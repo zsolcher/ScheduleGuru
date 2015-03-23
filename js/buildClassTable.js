@@ -1,6 +1,6 @@
 //allTables stores the id of a table and its values as an object
 var allTables = new Array();
-var headerValues = ["__","Name","Department","Number","Section","Prof","Building","RoomNum","Days","StartTime","EndTime","Notes"];
+var headerValues = ["__","Name","Department","Number","Section","Prof","Building","RoomNum","Days","StartTime","EndTime","Note"];
 
 function fillDepartmentTable(divName,dept){
 	var tableID = 'DepartmentTable-'+dept;
