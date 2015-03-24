@@ -8,6 +8,7 @@
 	$updateAccountSettings = "updateAccount";
 	$userData = "userData";
 	$getAllDepartment = "getAllDepartment";
+	$savedSchedules = "savedSchedules";
 	
 
 	$mysqli = mysqli_connect("localhost","colson1","0735524","ScheduleGuru");
@@ -47,6 +48,9 @@
 	}elseif($request ===$getAllDepartment) {
 		$dpt = $_GET['dpt'];		
 		$query = "SELECT * FROM AllClasses WHERE Department='".$dpt."';";
+	}elseif($request ===$savedSchedules) {
+		$userID = $_GET['UserID'];	
+		$query = "SELECT * FROM SavedSchedules WHERE UserID='".$userID."';";
 	}
 	$result = mysqli_query($mysqli,$query) or die(mysqli_error($mysqli));
 	
@@ -84,6 +88,11 @@
 			$row = mysqli_fetch_assoc($result);
 			echo json_encode($row);
 		}elseif($request === $getAllDepartment) {
+			while($row = mysqli_fetch_assoc($result)){
+				array_push($toReturn,$row);
+			}
+			echo json_encode($toReturn);
+		}elseif($request === $savedSchedules) {
 			while($row = mysqli_fetch_assoc($result)){
 				array_push($toReturn,$row);
 			}

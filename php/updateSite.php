@@ -46,4 +46,7 @@ function getAllDepartmentClasses(department){
 function login(username,password){
   	sendQuery("request=login&username="+username+"&password="+password);
 }
+function getSavedSchedules(userID){
+	sendQuery("request=savedSchedules&UserID="+userID);	
+}
 </script>

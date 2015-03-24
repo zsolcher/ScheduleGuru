@@ -9,7 +9,7 @@
 
     <!--  CSS/Fonts Imports  -->
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/build_schedule_area.css">
+    <link rel="stylesheet" href="css/buildScheduleArea.css">
 
     <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
     <!--  CSS/Fonts Imports  -->
@@ -121,7 +121,7 @@
 
         </core-pages>
 
-        <script src="js/build_schedule_area.js"></script>
+        <script src="js/buildScheduleArea.js"></script>
     </div>
 
     <div id="savedSchedulesArea">

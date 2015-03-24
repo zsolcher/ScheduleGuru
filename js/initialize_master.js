@@ -46,6 +46,7 @@ window.onload = function() {
                 hideAllAreas();
                 $("#buildScheduleTabs").show();
                 $("#buildScheduleArea").show();
+                $("#pageUploadTranscript").fadeIn('3000');
             }
         }
     );

@@ -9,7 +9,7 @@
 
     <!--  CSS/Fonts Imports  -->
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/build_schedule_area.css">
+    <link rel="stylesheet" href="css/buildScheduleArea.css">
 	<link rel="stylesheet" href="css/table.css">
 
 	<!--TODO-->
@@ -31,6 +31,9 @@
     <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
     <link rel="import" href="bower_components/core-icons/core-icons.html">
     <link rel="import" href="bower_components/core-pages/core-pages.html">
+    <link rel="import" href="bower_components/core-animated-pages/core-animated-pages.html">
+    <link rel="import" href="bower_components/core-animated-pages/transitions/slide-from-right.html">
+    <link rel="import" href="bower_components/core-animated-pages/transitions/slide-from-left.html">
 
 
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
@@ -98,37 +101,12 @@
     </script>
     </div>
 
-    <div id="buildScheduleArea" unresolved fullbleed horizontal center center-justified layout>
-        <core-pages class="fancy" selected="0">
-            <div class="page" id="pageUploadTranscript">
-                <paper-fab class="fabNavLeft" icon="chevron-left"></paper-fab>
-                one
-                <paper-fab class="fabNavRight" icon="chevron-right"> </paper-fab>
-            </div>
-            <div class="page" id="page2">
-                <paper-fab class="fabNavLeft" icon="chevron-left"></paper-fab>
-                two
-                <paper-fab class="fabNavRight" icon="chevron-right"> </paper-fab>
-            </div>
-            <div class="page" id="page3">
-                <paper-fab class="fabNavLeft" icon="chevron-left"></paper-fab>
-                three
-                <paper-fab class="fabNavRight" icon="chevron-right"> </paper-fab>
-            </div>
-            <div class="page" id="page4">
-                <paper-fab class="fabNavLeft" icon="chevron-left"></paper-fab>
-                four
-                <paper-fab class="fabNavRight" icon="chevron-right"> </paper-fab>
-            </div>
-            <div class="page" id="page5">
-                <paper-fab class="fabNavLeft" icon="chevron-left"></paper-fab>
-                five
-                <paper-fab class="fabNavRight" icon="chevron-right"> </paper-fab>
-            </div>
+    <div id="buildScheduleArea"  horizontal center center-justified layout>
+        <script type="text/javascript">
+            $( "#buildScheduleArea" ).load( "buildScheduleArea.php" );
+        </script>
 
-        </core-pages>
-
-        <script src="js/build_schedule_area.js"></script>
+        <script src="js/buildScheduleArea.js"></script>
     </div>
 
     <div id="savedSchedulesArea">
