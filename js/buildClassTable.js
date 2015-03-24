@@ -101,7 +101,13 @@ function addClassRow(tableID,classToAdd){
 
 		var rowData = new Array();
 		for(var i = 1; i < headerValues.length; ++i){
-			if(classToAdd[headerValues[i]] != undefined) rowData.push(classToAdd[headerValues[i]]);
+			if(classToAdd[headerValues[i]] != undefined){
+				var valueToAdd = classToAdd[headerValues[i]];
+				if(headerValues[i] == 'StartTime' || headerValues[i] == 'EndTime'){
+					valueToAdd = amPmParser(valueToAdd);
+				}
+				rowData.push(valueToAdd);
+			}
 			else rowData.push(" ");
 		}
 		fillTableRow(newRow,rowData);
@@ -146,6 +152,19 @@ function testCheckBoxes(checkBox){
 			removeCalendarClass(classData['ClassID']);
 		}
 	}
+}
+
+function amPmParser(time){
+	var splitTime = time.split(":");
+	if(splitTime.length != 3 || time == "00:00:00") return "TBA";
+	var decimalHour = Number(splitTime[0]);
+
+	var amPm = "am";
+	if(decimalHour > 12){
+		decimalHour -= 12;
+		amPm = "pm";
+	}
+	return (decimalHour.toString()+":"+splitTime[1]+amPm);
 }
 
 /*
