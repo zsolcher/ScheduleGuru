@@ -141,11 +141,10 @@ function drawSchedule(){
 	//Drawing time of day
 	for(var i = earliestStart; i <= latestEnd; ++i){
 		var time = i;
-		var amPm = "am  ";
-		if(time > 12){
-			time -= 12;
-			amPm = "pm  ";
-		}
+		var amPm = "pm  ";
+		if(time > 12) time -= 12;
+		else if(time < 12) amPm = "am  ";
+
 		ctx.fillText(time.toString()+":00 "+amPm,currX,(i-earliestStart)*hourSpacing+currY);
 	}
 
