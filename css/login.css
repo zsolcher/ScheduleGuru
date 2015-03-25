@@ -62,11 +62,11 @@ paper-input.narrow {
     width: 150px;
 }
 
-.textInput /deep/ ::-webkit-input-placeholder {
+.textInput /deep/ ::-webkit-input-placeholder  {
     color: white;
 }
 
-.textInput /deep/ ::-moz-placeholder {
+.textInput  ::-moz-placeholder {
     color: white;
 }
 

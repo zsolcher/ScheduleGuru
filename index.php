@@ -86,13 +86,14 @@
     <paper-button tool id="accountCircle">
         <core-icon icon="account-circle" style="width:50px; height:50px;"> </core-icon>
     </paper-button>
+
     <paper-tabs id="buildScheduleTabs" selected="0" main>
-        <paper-tab>Upload Transcript</paper-tab>
-        <paper-tab>Preferences</paper-tab>
-        <paper-tab>Major</paper-tab>
-        <paper-tab>Common Curriculum</paper-tab>
-        <paper-tab>Miscellaneous</paper-tab>
-        <paper-tab>Finalize</paper-tab>
+        <paper-tab id="tab1">Upload Transcript</paper-tab>
+        <paper-tab id="tab2">Preferences</paper-tab>
+        <paper-tab id="tab3">Major</paper-tab>
+        <paper-tab id="tab4">Common Curriculum</paper-tab>
+        <paper-tab id="tab5">Miscellaneous</paper-tab>
+        <paper-tab id="tab6">Finalize</paper-tab>
     </paper-tabs>
 
     <div id="homeArea">

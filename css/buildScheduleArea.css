@@ -1,4 +1,6 @@
-
+/*
+  ----------------- Document -----------------
+*/
 html, body {
     height: 100%;
 }
@@ -7,15 +9,31 @@ body {
     font-family: sans-serif;
 }
 
+div.page {
+    background-color: #6a83cf;
+    height: 100%
+}
+
+#pageUploadTranscript {
+
+}
+
+/*
+  ----------------- Core -----------------
+*/
 core-animated-pages {
-    width: 700px;
+    width: 850px;
     height: 600px;
-    border: 1px solid black;
+    border: 2px solid black;
     -webkit-user-select: none;
     border-radius: 5px;
     overflow: hidden;
+    margin-top: 7px;
 }
 
+/*
+  ----------------- Paper -----------------
+*/
 .fabNavLeft {
     background-color: #00bbd3;
     position: absolute;
@@ -31,11 +49,16 @@ core-animated-pages {
     top: 300px;
 }
 
-div.page {
-    background-color: #6a83cf;
-    height: 100%
+
+paper-tabs {
+    color: white;
 }
 
-#pageUploadTranscript {
+paper-tabs::shadow #selectionBar {
+    background-color: white;
+    height: 5px;
+}
 
+paper-tabs paper-tab::shadow #ink {
+   color: white;
 }

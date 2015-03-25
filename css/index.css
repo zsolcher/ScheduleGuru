@@ -3,9 +3,9 @@
 #title {
     text-align: center;
     font-weight: bolder;
-    font-size: 45px;
+    font-size: 18px;
     font-family: 'Berkshire Swash', cursive;
-    padding: 10px;
+    /*padding: 10px;*/
 }
 
 #menuTitle {
@@ -33,6 +33,7 @@ paper-tabs {
 
 core-item:hover {
     background-color: #89bdff;
+    cursor: pointer;
 }
 
 core-item.menuItem {
