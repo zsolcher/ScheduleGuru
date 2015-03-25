@@ -66,6 +66,10 @@
 <script src="js/initialize_master.js"></script>
 <script src="js/calendar.js"></script>
 <script src="js/buildClassTable.js"></script>
+<script>
+	getUserDataByID("740432");
+	var currentUser = result;
+</script>
 
 <core-scaffold id="scaffold">
     <core-header-panel navigation flex >
