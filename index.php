@@ -43,8 +43,8 @@
     <link rel="import" href="bower_components/paper-fab/paper-fab.html">
     <link rel="import" href="bower_components/paper-menu-button/paper-menu-button.html">
 	<link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
-    <link rel="import" href="bower_components/paper-item/paper-item.html">
     <link rel="import" href="bower_components/paper-dropdown/paper-dropdown.html">
+    <link rel="import" href="bower_components/paper-item/paper-item.html">
     <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
     <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
 	<link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">

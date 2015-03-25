@@ -27,12 +27,28 @@
                         </tbody>
                     </table>
                 </div>
-
             </div>
         </section>
         <section>
             <div class="page" id="pagePreferences">
-                two
+                <div id="areaMajor">
+                    <br><br>areaMajor<br><br>
+                </div>
+                <div id="areaInterests">
+                    <br><br>areaInterests<br><br>
+                </div>
+                <div id="areaTimes">
+                    <br><br>areaTimes<br><br>
+                </div>
+                <div id="areaDays">
+                    <paper-checkbox label="Monday"></paper-checkbox>
+                    <paper-checkbox label="Tuesday"></paper-checkbox>
+                    <paper-checkbox label="Wednesday"></paper-checkbox>
+                    <paper-checkbox label="Thursday"></paper-checkbox>
+                    <paper-checkbox label="Friday"></paper-checkbox>
+                    <paper-checkbox label="Saturday"></paper-checkbox>
+                    <paper-checkbox label="Sunday"></paper-checkbox>
+                </div>
             </div>
         </section>
         <section>
