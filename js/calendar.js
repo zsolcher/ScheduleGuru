@@ -124,18 +124,36 @@ function readSchedule(){
 */
 
 function drawSchedule(){
-	var dayWidth = canvas.width/(numDays+1);
+	var dayWidth = canvas.width/(numDays+2);
 	var dayGap = dayWidth/(numDays+1);
+	var timeGap = canvas.width-dayWidth*numDays-dayGap*(numDays+1);
 	var dayVertGap = canvas.height*(1-dayHeightRatio)/2;
 	var classWidth = dayWidth*classToDayWidthRatio;
-	var currX = dayGap;
+	var currX = timeGap;
 	var currY = dayVertGap;
 	var dayLen = canvas.height*dayHeightRatio;
+	var hourSpacing = dayLen/(latestEnd-earliestStart);
+	ctx.fillStyle = "#000000";
+	ctx.font = "bold "+getFont();
+	ctx.textAlign="right";
+	ctx.textBaseline = "middle";
+
+	//Drawing time of day
+	for(var i = earliestStart; i <= latestEnd; ++i){
+		var time = i;
+		var amPm = "pm  ";
+		if(time > 12) time -= 12;
+		else if(time < 12) amPm = "am  ";
+
+		ctx.fillText(time.toString()+":00 "+amPm,currX,(i-earliestStart)*hourSpacing+currY);
+	}
+
 	ctx.fillStyle = "#000000";
 	ctx.font = "bold "+getFont();
 	ctx.textAlign="center";
 	ctx.textBaseline = "bottom";
 
+	//Drawing day boxes
 	for(var i = 0; i < numDays; ++i){
 		ctx.rect(currX,currY,dayWidth,canvas.height*dayHeightRatio);
 		ctx.stroke();
@@ -143,6 +161,7 @@ function drawSchedule(){
 		currX += dayWidth+dayGap;
 	}
 
+	//Drawing courses
 	for(var i = 0; i < calendarCourseArray.length; ++i){
 		var courseDep = calendarCourseArray[i].department;
 		var courseNum = calendarCourseArray[i].num;
@@ -157,14 +176,14 @@ function drawSchedule(){
 		}
 
 		for(var j = 0; j < courseDays.length; ++j){
-			var startWidth = 0;
-			if(courseDays[j] == 'M') startWidth = dayGap;
-			else if(courseDays[j] == 'T') startWidth = 2*(dayWidth+dayGap)-dayWidth;
-			else if(courseDays[j] == 'W') startWidth = 3*(dayWidth+dayGap)-dayWidth;
-			else if(courseDays[j] == 'R') startWidth = 4*(dayWidth+dayGap)-dayWidth;
-			else if(courseDays[j] == 'F') startWidth = 5*(dayWidth+dayGap)-dayWidth;
-			else if(courseDays[j] == 'S') startWidth = 6*(dayWidth+dayGap)-dayWidth;
-			else if(courseDays[j] == 'U') startWidth = 7*(dayWidth+dayGap)-dayWidth;
+			var startWidth = timeGap;
+			if(courseDays[j] == 'M') startWidth;
+			else if(courseDays[j] == 'T') startWidth += 1*(dayWidth+dayGap);
+			else if(courseDays[j] == 'W') startWidth += 2*(dayWidth+dayGap);
+			else if(courseDays[j] == 'R') startWidth += 3*(dayWidth+dayGap);
+			else if(courseDays[j] == 'F') startWidth += 4*(dayWidth+dayGap);
+			else if(courseDays[j] == 'S') startWidth += 5*(dayWidth+dayGap);
+			else if(courseDays[j] == 'U') startWidth += 6*(dayWidth+dayGap);
 			startWidth += (dayWidth-classWidth)/2;
 			ctx.fillStyle = colorsArray[i];
 			ctx.fillRect(startWidth,startHeight,classWidth,endHeight-startHeight);

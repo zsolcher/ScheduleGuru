@@ -21,13 +21,13 @@ body {
     padding-bottom: 5px;
 }
 
-#accountSettingsArea{
+#currentSettingsArea{
     background-color: #7986cb;
 
-    position:absolute;
+	float: left;
     left:50%;
     top:60%;
-    margin:-400px 0 0 -275px;
+    margin: 20px 20px 20px 20px;
     height: 550px;
     width: 500px;
 
@@ -40,6 +40,24 @@ body {
     box-shadow: 10px 10px 73px 0px rgba(0,0,0,0.75);
 }
 
+#updateSettingsArea{
+    background-color: #7986cb;
+
+    float: left;
+	right:50%;
+    top:60%;
+    margin: 20px 20px 20px 20px;
+    height: 550px;
+    width: 500px;
+
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    border: 10px solid #ffffff;
+    -webkit-box-shadow: 10px 10px 73px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 73px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 73px 0px rgba(0,0,0,0.75);
+}
 img {
     height: 100px;
     width: 100px;

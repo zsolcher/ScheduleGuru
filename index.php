@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/buildScheduleArea.css">
 	<link rel="stylesheet" href="css/table.css">
+	<link rel="shortcut icon" href="favicon.ico">
 
 	<!--TODO-->
 	<link rel="stylesheet" href="css/accountSettingsArea.css">   

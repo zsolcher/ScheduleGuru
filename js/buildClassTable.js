@@ -1,6 +1,6 @@
 //allTables stores the id of a table and its values as an object
 var allTables = new Array();
-var headerValues = ["__","Name","Department","Number","Section","Prof","Building","RoomNum","Days","StartTime","EndTime","Notes"];
+var headerValues = ["__","Name","Department","Number","Section","Prof","Building","RoomNum","Days","StartTime","EndTime","Note"];
 
 function fillDepartmentTable(divName,dept){
 	var tableID = 'DepartmentTable-'+dept;
@@ -79,46 +79,41 @@ function addClassRow(tableID,classToAdd){
 	if(table != undefined && classToAdd['Name'] != undefined){
 		var numRows = table.rows.length;
 		var newRow = table.insertRow();
-		var checkBox = document.createElement("input");
+		var checkBoxID = "tableID:"+tableID+":row:"+(numRows+1);
+		
+		//These two lines create the paper checkbox
+		var checkBox = document.createElement('div');
+		checkBox.innerHTML = "<paper-checkbox id="+checkBoxID+" checked=false onclick=\"testCheckBoxes(this);\"></paper-checkbox>";
+
+/*
+		//This goes back to the built in check boxes
+		//Also need to change the testCheckBoxes function
+		var checkBox = document.createElement('input');
 		checkBox.type = "checkbox";
+		checkBox.id = checkBoxID;
 		checkBox.checked = false;
-		checkBox.id = "tableID:"+tableID+":row:"+(numRows+1);
 		checkBox.onclick = function(){testCheckBoxes(checkBox);};
+*/
+
 		checkBoxCell = newRow.insertCell();
 		checkBoxCell.style.border = "1px solid #7986cb";
 		checkBoxCell.appendChild(checkBox);
 
 		var rowData = new Array();
 		for(var i = 1; i < headerValues.length; ++i){
-			if(classToAdd[headerValues[i]] != undefined) rowData.push(classToAdd[headerValues[i]]);
+			if(classToAdd[headerValues[i]] != undefined){
+				var valueToAdd = classToAdd[headerValues[i]];
+				if(headerValues[i] == 'StartTime' || headerValues[i] == 'EndTime'){
+					valueToAdd = amPmParser(valueToAdd);
+				}
+				rowData.push(valueToAdd);
+			}
 			else rowData.push(" ");
 		}
 		fillTableRow(newRow,rowData);
 	}
 }
-/*
-function addClassToTable(tableID,classToAdd){
-	var table = document.getElementById(tableID);
-	if(table != undefined && classToAdd['Name'] != undefined){
-		var numRows = table.rows.length;
-		var newRow = table.insertRow();
-		var checkBox = document.createElement("input");
-		checkBox.type = "checkbox";
-		checkBox.checked = true;
-		checkBox.id = "tableID:"+tableID+":row:"+(numRows+1);
-		checkBoxCell = newRow.insertCell();
-		checkBoxCell.style.border = "1px solid black";
-		checkBoxCell.appendChild(checkBox);
 
-		var rowData = new Array();
-		for(var i = 1; i < headerValues.length; ++i){
-			if(classToAdd[headerValues[i]] != undefined) rowData.push(classToAdd[headerValues[i]]);
-			else rowData.push(" ");
-		}
-		fillTableRow(newRow,rowData);
-	}
-}
-*/
 function fillTableRow(tableRow,values){
 	for(var i = 0; i < values.length; ++i){
 		var currentCell = tableRow.insertCell();
@@ -150,7 +145,7 @@ function testCheckBoxes(checkBox){
 	var tableObject = fetchTableObjectByID(tableID);
 	if(tableObject != null){
 		var classData = tableObject['classes'][rowNum];
-		if(checkBox.checked){
+		if(!checkBox.checked){
 			addCalendarClass(classData);
 		}
 		else{
@@ -158,4 +153,41 @@ function testCheckBoxes(checkBox){
 		}
 	}
 }
+
+function amPmParser(time){
+	var splitTime = time.split(":");
+	if(splitTime.length != 3 || time == "00:00:00") return "TBA";
+	var decimalHour = Number(splitTime[0]);
+
+	var amPm = "am";
+	if(decimalHour > 12){
+		decimalHour -= 12;
+		amPm = "pm";
+	}
+	return (decimalHour.toString()+":"+splitTime[1]+amPm);
+}
+
+/*
+function addClassToTable(tableID,classToAdd){
+	var table = document.getElementById(tableID);
+	if(table != undefined && classToAdd['Name'] != undefined){
+		var numRows = table.rows.length;
+		var newRow = table.insertRow();
+		var checkBox = document.createElement("input");
+		checkBox.type = "checkbox";
+		checkBox.checked = true;
+		checkBox.id = "tableID:"+tableID+":row:"+(numRows+1);
+		checkBoxCell = newRow.insertCell();
+		checkBoxCell.style.border = "1px solid black";
+		checkBoxCell.appendChild(checkBox);
+
+		var rowData = new Array();
+		for(var i = 1; i < headerValues.length; ++i){
+			if(classToAdd[headerValues[i]] != undefined) rowData.push(classToAdd[headerValues[i]]);
+			else rowData.push(" ");
+		}
+		fillTableRow(newRow,rowData);
+	}
+}
+*/
 
