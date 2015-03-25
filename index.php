@@ -35,6 +35,7 @@
     <link rel="import" href="bower_components/core-animated-pages/core-animated-pages.html">
     <link rel="import" href="bower_components/core-animated-pages/transitions/slide-from-right.html">
     <link rel="import" href="bower_components/core-animated-pages/transitions/slide-from-left.html">
+    <link rel="import" href="bower_components/core-list/core-list.html">
 
 
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">

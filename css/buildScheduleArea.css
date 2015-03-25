@@ -49,7 +49,6 @@ core-animated-pages {
     top: 300px;
 }
 
-
 paper-tabs {
     color: white;
 }
@@ -61,4 +60,140 @@ paper-tabs::shadow #selectionBar {
 
 paper-tabs paper-tab::shadow #ink {
    color: white;
+}
+
+#btnSubmitTranscript {
+    position: absolute;
+    top: 515px;
+    left: 50px;
+
+    background: #6b499f;
+    color: white;
+
+    margin: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    width: 125px;
+    height: 45px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/*
+  ----------------- Table/Textarea -----------------
+*/
+
+/* define height and width of scrollable area. Add 16px to width for scrollbar          */
+div.tableContainer {
+    position: absolute;
+    top: 0;
+    right: 5px;
+
+    clear: both;
+    height: 526px;
+    overflow: auto;
+    width: 565px;
+}
+
+/* Reset overflow value to hidden for all non-IE browsers. */
+html>body div.tableContainer {
+    overflow: hidden;
+    width: 565px;
+}
+
+/* define width of table. IE browsers only                 */
+div.tableContainer table {
+    float: left;
+    width: 565px;
+}
+
+/* define width of table. Add 16px to width for scrollbar.           */
+/* All other non-IE browsers.                                        */
+html>body div.tableContainer table {
+    width: 565px;
+}
+
+/* set table header to a fixed position. WinIE 6.x only                                       */
+/* In WinIE 6.x, any element with a position property set to relative and is a child of       */
+/* an element that has an overflow property set, the relative value translates into fixed.    */
+/* Ex: parent element DIV with a class of tableContainer has an overflow property set to auto */
+thead.fixedHeader tr {
+    position: relative;
+}
+
+/* set THEAD element to have block level attributes. All other non-IE browsers            */
+/* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+html>body thead.fixedHeader tr {
+    display: block;
+}
+
+/* make the TH elements pretty */
+thead.fixedHeader th {
+    background: #5265a2;
+    border: 1px solid mediumpurple;
+    font-weight: normal;
+    padding: 4px 3px;
+    text-align: left;
+}
+
+/* define the table content to be scrollable                                              */
+/* set TBODY element to have block level attributes. All other non-IE browsers            */
+/* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+/* induced side effect is that child TDs no longer accept width: auto                     */
+html>body tbody.scrollContent {
+    display: block;
+    height: 526px;
+    overflow: auto;
+    width: 100%;
+}
+
+/* make TD elements pretty. Provide alternating classes for striping the table */
+/* http://www.alistapart.com/articles/zebratables/                             */
+tbody.scrollContent td, tbody.scrollContent tr.normalRow td {
+    background: #FFF;
+    padding: 2px 3px 3px 4px;
+}
+
+.tableContainer td {
+    border: 1px solid mediumpurple;
+}
+
+/* define width of TH elements: 1st, 2nd, and 3rd respectively.          */
+/* Add 16px to last TH for scrollbar padding. All other non-IE browsers. */
+/* http://www.w3.org/TR/REC-CSS2/selector.html#adjacent-selectors        */
+html>body thead.fixedHeader th {
+    width: 200px;
+}
+
+html>body thead.fixedHeader th + th {
+    width: 240px;
+}
+
+html>body thead.fixedHeader th + th + th {
+    width: 316px;
+}
+
+html>body thead.fixedHeader th + th + th + th {
+    width: 346px;
+}
+
+/* define width of TD elements: 1st, 2nd, and 3rd respectively.          */
+/* All other non-IE browsers.                                            */
+/* http://www.w3.org/TR/REC-CSS2/selector.html#adjacent-selectors        */
+html>body tbody.scrollContent td {
+    width: 200px;
+}
+
+html>body tbody.scrollContent td + td {
+    width: 240px;
+}
+
+html>body tbody.scrollContent td + td + td {
+    width: 300px;
+}
+
+html>body tbody.scrollContent td + td + td + td {
+    width: 300px;
 }

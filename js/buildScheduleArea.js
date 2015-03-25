@@ -37,3 +37,16 @@ $('.fabNavRight').on({
         }
     }
 );
+
+$('#textAreaTranscript').on({
+    'focus': function(e) {
+        //$(this).text = '';
+        $(this).css("background-color","lightblue");
+    },
+    'focusout': function(e) {
+        if($(this).text == ""){
+           // $(this).text = "Paste your transcript here...";
+        }
+        $(this).css("background-color","white");
+    }
+});
