@@ -7,7 +7,7 @@ h1,h3 {
 } 
 
 #letterArea{
-	background-image: url("imgs/parchment.jpg");
+	//background-image: url("imgs/parchment.jpg");
 	background-size: cover; 
 }
 </style>
