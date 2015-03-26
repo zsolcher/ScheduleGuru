@@ -66,6 +66,7 @@
 <body>
 <script>
 	var userEmail = localStorage.getItem("userEmail");
+	if(userEmail == null) window.location.href = "http://dias11.cs.trinity.edu/~rbierman/ScheduleGuru/login.php";
 	getUserData(userEmail);
 	var currentUser = Object();
 	var fields = Array('UserID','Email','Major','FirstName','LastName','Year');
