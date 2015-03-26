@@ -39,6 +39,26 @@ body {
     box-shadow: 10px 10px 73px 0px rgba(0,0,0,0.75);
 }
 
+#registerArea {
+    background-color: #7986cb;
+
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-400px 0 0 -275px;
+    height: 700px;
+    width: 500px;
+
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    border: 10px solid #ffffff;
+    -webkit-box-shadow: 10px 10px 73px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 73px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 73px 0px rgba(0,0,0,0.75);
+}
+
+
 img {
     height: 100px;
     width: 100px;
@@ -109,6 +129,19 @@ paper-input.narrow {
   ----------------- Buttons -----------------
 */
 paper-button[raised].loginButton {
+    margin: 20px;
+    background: #4285f4;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    width: 125px;
+    height: 45px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+paper-button[raised].registerButton {
     margin: 20px;
     background: #4285f4;
     color: #fff;
