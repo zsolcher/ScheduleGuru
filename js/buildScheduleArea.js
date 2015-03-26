@@ -3,10 +3,15 @@
  */
 
 var paperTabs = document.querySelector('#buildScheduleTabs');
-
+var tabNum = 1;
+changeTabColor(2);
 
 $('.fabNavLeft').on({
         'click': function(e){
+        		if(tabNum > 1){
+        			tabNum--;
+        			changeTabColor(tabNum+1);
+        		}
             var corePages = document.querySelector('core-animated-pages.fancy');
             var paperTabs = document.querySelector('#buildScheduleTabs');
 
@@ -24,6 +29,10 @@ $('.fabNavLeft').on({
 
 $('.fabNavRight').on({
         'click': function (e) {
+        		if(tabNum < 6){
+        			tabNum++;
+        			changeTabColor(tabNum-1);
+        		}
             var corePages = document.querySelector('core-animated-pages.fancy');
             var paperTabs = document.querySelector('#buildScheduleTabs');
             var numPages = 6;
@@ -37,3 +46,12 @@ $('.fabNavRight').on({
         }
     }
 );
+
+function changeTabColor(oriColoredTab) {
+	var tabOff = document.getElementById("tab"+oriColoredTab);
+	tabOff.style.color = "white";
+	tabOff.style.fontWeight = "normal";
+	var tabOn = document.getElementById("tab"+tabNum);
+	tabOn.style.color = "green";
+	tabOn.style.fontWeight = 'bold';
+}

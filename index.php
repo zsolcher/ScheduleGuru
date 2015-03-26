@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <title>Home</title>
     <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="2012-08-22" >
+    <meta name="author" content="2011-08-24" >
 
     <!--  CSS/Fonts Imports  -->
     <link rel="stylesheet" href="css/index.css">
@@ -66,7 +66,7 @@
 <body>
 <script>
 	var userEmail = localStorage.getItem("userEmail");
-	if(userEmail == null) window.location.href = "http://dias11.cs.trinity.edu/~rbierman/ScheduleGuru/login.php";
+	if(userEmail == null) window.location.href = "login.php";
 	getUserData(userEmail);
 	var currentUser = Object();
 	var fields = Array('UserID','Email','Major','FirstName','LastName','Year');
@@ -94,15 +94,16 @@
     <paper-button tool id="accountCircle">
         <core-icon icon="account-circle" style="width:50px; height:50px;"> </core-icon>
     </paper-button>
-
-    <paper-tabs id="buildScheduleTabs" selected="1" main>
-        <paper-tab id="tab1">Upload Transcript</paper-tab>
-        <paper-tab id="tab2">Preferences</paper-tab>
-        <paper-tab id="tab3">Major</paper-tab>
-        <paper-tab id="tab4">Common Curriculum</paper-tab>
-        <paper-tab id="tab5">Miscellaneous</paper-tab>
-        <paper-tab id="tab6">Finalize</paper-tab>
-    </paper-tabs>
+	 <div id="progressBar">
+    <ul id="buildScheduleTabs">
+        <li id="tab1">Upload Transcript</li>
+        <li id="tab2">Preferences</li>
+        <li id="tab3">Major</li>
+        <li id="tab4">Common Curriculum</li>
+        <li id="tab5">Miscellaneous</li>
+        <li id="tab6">Finalize</li>
+    </ul>
+    </div>
 
     <div id="homeArea">
     <script type="text/javascript">
