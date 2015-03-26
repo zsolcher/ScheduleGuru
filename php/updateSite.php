@@ -49,4 +49,7 @@ function login(username,password){
 function getSavedSchedules(userID){
 	sendQuery("request=savedSchedules&UserID="+userID);	
 }
+function registerUser(username,password,firstname,lastname){
+	sendQuery("request=registerUser&username="+username+"&password="+password+"&FirstName="+firstname+"&LastName="+lastname);	
+}
 </script>
