@@ -65,7 +65,7 @@
 
 
 	<header>
-		Already a user? <a href="./index.php">Back to login...</a>
+		Already a user? <a href="./login.php">Back to login...</a>
 	</header>
 		
 		</form>
