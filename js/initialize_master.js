@@ -95,8 +95,6 @@ window.onload = function() {
         var corePages = document.querySelector('core-animated-pages.fancy');
 
         if(e.detail.isSelected == true) {
-            console.log(e.detail.item);
-
             switch(e.detail.item.id) {
                 case "tab1":
                     corePages.selected = 0;

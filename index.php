@@ -93,7 +93,7 @@
         <core-icon icon="account-circle" style="width:50px; height:50px;"> </core-icon>
     </paper-button>
 
-    <paper-tabs id="buildScheduleTabs" selected="0" main>
+    <paper-tabs id="buildScheduleTabs" selected="1" main>
         <paper-tab id="tab1">Upload Transcript</paper-tab>
         <paper-tab id="tab2">Preferences</paper-tab>
         <paper-tab id="tab3">Major</paper-tab>
