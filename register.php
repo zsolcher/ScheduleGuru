@@ -58,13 +58,13 @@
 		<br>
 		
 		<paper-input-decorator class="textInput" id="inputPassword" name="new_user_pwd1" label="password"  floatingLabel>
-                <input is="core-input" id="new_user_pwd1" type="password" value="lololol">
+                <input is="core-input" id="new_user_pwd1" type="password" value="">
             </paper-input-decorator>
 
 		<br>
 		
 		<paper-input-decorator class="textInput" id="inputPassword" name="new_user_pwd2" label="Re-Enter Password"  floatingLabel>
-                <input is="core-input" id="new_user_pwd2" type="password" value="lololol">
+                <input is="core-input" id="new_user_pwd2" type="password" value="">
             </paper-input-decorator>
 
 		<br>
