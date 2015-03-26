@@ -1,7 +1,7 @@
 <html>
 <paper-fab class="fabNavLeft" icon="chevron-left"></paper-fab>
 
-<core-animated-pages class="fancy" selected="1" transitions="slide-from-right">
+<core-animated-pages class="fancy" selected="0" transitions="slide-from-right">
     <section>
         <div class="page" id="pageUploadTranscript">
             <textarea id="textAreaTranscript" rows="40" cols="40"
