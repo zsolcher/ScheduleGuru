@@ -6,6 +6,7 @@
 window.onload = function() {
     $('#btnRegister').on ({
         'click':  function(){
+				alert("woo");
                 window.location = './register.php';
             }
         }
@@ -20,9 +21,11 @@ window.onload = function() {
 
                 var resultLogin = login(email,pw);
                 if(resultLogin === "0") {
+					alert("Wrong logins");
                     $('#loginMessage').innerHTML = "Incorrect login credentials. Please try again.";
                 } else {
-                    window.location.href = "http://dias11.cs.trinity.edu/~zsolcher/WebApps/ScheduleGuru/index.php";
+					alert("Correct logins");
+                    window.location.href = "http://dias11.cs.trinity.edu/~rbierman/ScheduleGuru/index.php";
                 }
             }
         }
