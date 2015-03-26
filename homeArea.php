@@ -39,7 +39,12 @@ h1,h3 {
 				ScheduleGuru Team
 				<br>
 				<br>
-            P.S. Please email us with any feedback :)
+				P.S. Please 
+				<a href="email.html">email</a> 
+				us with any feedback :)
+				<br>
+				<br>
+				
 				
 			</h3>
         </p>
