@@ -53,6 +53,9 @@
     <link rel="import" href="bower_components/paper-tabs/paper-tab.html">
     <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
 	<link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+    <link rel="import" href="bower_components/paper-slider/paper-slider.html">
+    <link rel="import" href="bower_components/paper-radio-group/paper-radio-group.html">
+    <link rel="import" href="bower_components/paper-radio-button/paper-radio-button.html">
 
     <!--  JQuery Import  -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -66,7 +69,7 @@
 <body>
 <script>
 	var userEmail = localStorage.getItem("userEmail");
-	if(userEmail == null) window.location.href = "login.php";
+	//if(userEmail == null) window.location.href = "login.php";
 	getUserData(userEmail);
 	var currentUser = Object();
 	var fields = Array('UserID','Email','Major','FirstName','LastName','Year');
