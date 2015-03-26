@@ -33,7 +33,7 @@
 
 <body>
 
-	<form id="registerArea" action="./validate_registration.php" method="post">
+	<form id="registerArea" action="./php/validate_registration.php" method="post">
         <h3 id="title">Create An Account</h3>
 		
 		<paper-input-decorator class="textInput" id="inputFirst" name="new_user_fname" label="First Name" floatingLabel>
@@ -61,7 +61,8 @@
                 <input is="core-input" id="new_user_pwd2" type="password" value="">
             </paper-input-decorator>
 		
-		<paper-button raised class="registerButton" id="btnReg">Register</paper-button>
+		<!-- paper-button raised class="registerButton" id="btnReg">Register</paper-button -->
+		<input type="submit">Register</paper-button>
 
 
 	<header>
