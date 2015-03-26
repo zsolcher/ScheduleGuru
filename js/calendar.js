@@ -31,31 +31,32 @@ function drawLoop() {
 }
 
 function addCalendarClass(toAdd){
-	if(toAdd['ClassID'] != undefined){
-		if(!calendarCourseArrayContains(toAdd['ClassID'])){
-			var toPush = new Object;
-			toPush['start'] = toAdd['StartTime'];
-			toPush['end'] = toAdd['EndTime'];
-			toPush['name'] = toAdd['Name'];
-			toPush['department'] = toAdd['Department'];
-			toPush['num'] = toAdd['Number'];
-			toPush['days'] = toAdd['Days'];
-			toPush['classID'] = toAdd['ClassID'];
-			calendarCourseArray.push(toPush);
-		}
-		else{
-			alert("already added that course");
-		}
+	if(toAdd['ClassID'] == undefined){
+		alert("classID is undefined in addCalendarClass");
+		return false;
 	}
-}
+	if(calendarCourseArrayContains(toAdd['ClassID'])){
+		alert("already added that course");
+		return false;
+	}
+	if(checkOverlap(toAdd) != -1){
+		var overlapCourse = calendarCourseArray[checkOverlap(toAdd)];
+		var overlapName = overlapCourse['name'];
+		alert("Selected course overlaps with:\n\n"+overlapName+"\n\nPlease uncheck that course first");
+		return false;
+	}
 
-/*
-function loadSchedule(scheduleNum){
-	deleteCanvas();
-	calendarCourseArray = new Array();
-	document.getElementById("frmFileSchedule").src = "schedule"+scheduleNum+".txt";
+	var toPush = new Object;
+	toPush['start'] = toAdd['StartTime'];
+	toPush['end'] = toAdd['EndTime'];
+	toPush['name'] = toAdd['Name'];
+	toPush['department'] = toAdd['Department'];
+	toPush['num'] = toAdd['Number'];
+	toPush['days'] = toAdd['Days'];
+	toPush['classID'] = toAdd['ClassID'];
+	calendarCourseArray.push(toPush);
+	return true;
 }
-*/
 
 function createCalendar(){
 	canvas = document.createElement("canvas");
@@ -103,25 +104,6 @@ function updateCanvas(){
 	ctx.fillRect(0,0,canvas.width,canvas.height);
 	drawSchedule();
 }
-
-/*
-function readSchedule(){
-	var oFrame = document.getElementById("frmFileSchedule");
-	var strRawContents = oFrame.contentWindow.document.body.childNodes[0].innerHTML;
-
-	while(strRawContents.indexOf("\r") >= 0){
-		strRawContents = strRawContents.replace("\r","");
-	}
-
-	var splitCourseLines = strRawContents.split("\n");
-	for(var i = 0; i < splitCourseLines.length-1; ++i){
-		var splits = splitCourseLines[i].split(" ");
-		var courseToPush = {name:splits[0],department:splits[1],num:splits[2],start:splits[3],end:splits[4],days:splits[5]};
-		calendarCourseArray.push(courseToPush);
-	}
-
-}
-*/
 
 function drawSchedule(){
 	var dayWidth = canvas.width/(numDays+2);
@@ -237,4 +219,36 @@ function removeCalendarClass(classID){
 		else ++i;
 	}
 	if(i < calendarCourseArray.length) calendarCourseArray.splice(i,1);
+}
+
+function checkOverlap(course){
+	var foundOverlap = false;
+	var i = 0;
+	var newStart = interpTime(course['StartTime']);
+	var newEnd = interpTime(course['EndTime']);
+	var newDays = course['Days'];
+	while(!foundOverlap && i < calendarCourseArray.length){
+		var currentCourse = calendarCourseArray[i];
+		var start = interpTime(currentCourse['start']);
+		var end = interpTime(currentCourse['end']);
+		var days = currentCourse['days'];
+		if(checkDayOverlap(newDays,days)){
+			if((start >= newStart && start <= newEnd) || (end >= newStart && end <= newEnd)) foundOverlap = true;
+			else ++i;
+		}
+		else ++i;
+	}
+
+	if(foundOverlap) return i;
+	else return -1;
+}
+
+function checkDayOverlap(days1,days2){
+	var foundOverlap = false;
+	var i = 0;
+	while(!foundOverlap && i < days1.length){
+		if(days2.indexOf(days1[i]) != -1) foundOverlap = true;
+		else ++i;
+	}
+	return foundOverlap;
 }

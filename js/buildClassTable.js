@@ -146,7 +146,7 @@ function testCheckBoxes(checkBox){
 	if(tableObject != null){
 		var classData = tableObject['classes'][rowNum];
 		if(!checkBox.checked){
-			addCalendarClass(classData);
+			if(!addCalendarClass(classData)) checkBox.checked = true;
 		}
 		else{
 			removeCalendarClass(classData['ClassID']);
