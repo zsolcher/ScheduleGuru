@@ -3,19 +3,9 @@
 
     <div id="savedSchedulesArea">
      	<center>
-			<paper-dropdown-menu label = "View Past Class Schedules">
-				<paper-dropdown class = "dropdown">
-					<core-menu class="menu">
-						<paper-item>Spring 2013</paper-item>
-						<paper-item>Fall 2013</paper-item>
-						<paper-item>Spring 2014</paper-item>
-						<paper-item>Fall 2014</paper-item>
-						<paper-item>Spring 2015</paper-item>
-					</core-menu>
-				</paper-dropdown>
-			</paper-dropdown-menu>
 			<br>
 			<br>
+			<h1> Click on the schedule link itself to finish where you left off with your schedule planning. Check the box in front of the schedule to delete it.  </h1>
 
 			<paper-checkbox checked label="Schedule 1"> </paper-checkbox> <br><br>
 			
@@ -27,7 +17,7 @@
 						
 
 			
-            <paper-button raised class="acctButton" id="btnAcct" >Save</paper-button>
+            <paper-button raised class="acctButton" id="btnAcct" >Delete</paper-button>
 			</center> 
         </form>
 
