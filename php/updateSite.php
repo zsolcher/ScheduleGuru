@@ -25,11 +25,8 @@ function updateAccountSettings(userID,Major,Year,FirstName,LastName){
   		sendQuery("request=updateAccount&UserID="+userID+"&Major="+Major+"&Year="+Year+"&FirstName="+FirstName+"&LastName="+LastName);
 	}
 }
-function getUserDataByID(userID){
-	sendQuery("request=userData&UserID="+userID);
-}
-function getUserDataByEmail(userID){
-	sendQuery("request=userData&UserID="+userID);
+function getUserData(userEmail){
+	sendQuery("request=userData&UserEmail="+userEmail);
 }
 function getPrereqs(classID){
   	sendQuery("request=prereqs&ClassID="+classID);

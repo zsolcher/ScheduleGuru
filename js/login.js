@@ -1,8 +1,6 @@
 /**
  * Created by zsolcher on 3/19/15.
  */
-
-
 window.onload = function() {
     $('#btnRegister').on ({
         'click':  function(){
@@ -32,3 +30,5 @@ window.onload = function() {
     );
 
 };
+
+

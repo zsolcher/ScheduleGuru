@@ -43,8 +43,8 @@
 			Year = '".$year."'
 			WHERE UserID = '".$userID."';";
 	}elseif($request ===$userData) {
-		$userID = $_GET['UserID'];		
-		$query = "SELECT * FROM Users WHERE UserID='".$userID."';";
+		$userEmail = $_GET['UserEmail'];		
+		$query = "SELECT * FROM Users WHERE Email='".$userEmail."';";
 	}elseif($request ===$getAllDepartment) {
 		$dpt = $_GET['dpt'];		
 		$query = "SELECT * FROM AllClasses WHERE Department='".$dpt."';";

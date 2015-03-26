@@ -90,36 +90,5 @@ window.onload = function() {
 			}
 		}
 	);
-
-    paperTabs.addEventListener('core-select', function(e) {
-        var corePages = document.querySelector('core-animated-pages.fancy');
-
-        if(e.detail.isSelected == true) {
-            switch(e.detail.item.id) {
-                case "tab1":
-                    corePages.selected = 0;
-                    break;
-                case 'tab2':
-                    corePages.selected = 1;
-                    break;
-                case 'tab3':
-                    corePages.selected = 2;
-                    break;
-                case 'tab4':
-                    corePages.selected = 3;
-                    break;
-                case 'tab5':
-                    corePages.selected = 4;
-                    break;
-                case 'tab6':
-                    corePages.selected = 5;
-                    break;
-                default:
-                    break;
-            }
-
-        }
-
-    });
 };
 

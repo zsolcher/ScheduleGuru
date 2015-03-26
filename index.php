@@ -1,3 +1,8 @@
+<?php
+	//include("./php/check_logged_in.php");
+	include("./php/updateSite.php");
+?>
+
 <!doctype html>
 
 <html lang="en">
@@ -54,21 +59,17 @@
     <!--  JQuery Import  -->
 
     <!--  PHP Import  -->
-    <?php
-    	//include("./php/check_logged_in.php");
-    	include("./php/updateSite.php");
-	 ?>
     <!--  PHP Import  -->
 
 </head>
 
 <body>
-
 <script src="js/initialize_master.js"></script>
 <script src="js/calendar.js"></script>
 <script src="js/buildClassTable.js"></script>
 <script>
-	getUserDataByID("740432");
+	var userEmail = localStorage.getItem("userEmail");
+	getUserData(userEmail);
 	var currentUser = result;
 </script>
 

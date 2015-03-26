@@ -1,3 +1,8 @@
+<?php
+	include('./php/updateSite.php');
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -8,6 +13,7 @@
     <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/login.css">
+	<link rel="shortcut icon" href="favicon.ico">
     <!-- CSS Import-->
 
     <!-- Polymer Imports  -->
@@ -24,40 +30,57 @@
     <!-- Polymer Imports  -->
 
     <!--  JavaScript/JQuery Import  -->
-    <script src="js/login.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!--  JavaScript/JQuery Import  -->
 
 
 </head>
 <body>
-    <?php include './php/updateSite.php';
-    ?>
 
     <div id="loginArea">
         <img src="./imgs/guru-icon.png">
         <h1 id="title">Schedule Guru</h1>
 
-        <div id="loginMessage">
+		<div id="loginMessage"></div>
 
-        </div>
-        <form id="loginForm" action="./php/validate_login.php" method="post">
-            <paper-input-decorator class="textInput" id="inputEmail" name="login_email" label="email address" floatingLabel>
-                <input is="core-input"id="txtEmail" value="rbierman@trinity.edu">
-            </paper-input-decorator>
+		<paper-input-decorator class="textInput" id="inputEmail" name="login_email" label="email address" floatingLabel>
+		<input is="core-input"id="txtEmail" value="rbierman@trinity.edu">
+		</paper-input-decorator>
+		<paper-input-decorator class="textInput" id="inputPassword" name="login_password" label="password"  floatingLabel>
+		<input is="core-input" id="txtPassword" type="password" value="lololol">
+		</paper-input-decorator>
 
-            <paper-input-decorator class="textInput" id="inputPassword" name="login_password" label="password"  floatingLabel>
-                <input is="core-input" id="txtPassword" type="password" value="lololol">
-            </paper-input-decorator>
-
-            <paper-button raised class="loginButton" id="btnLogin" >Login</paper-button>
-            <paper-button raised class="loginButton" id="btnRegister">Register</paper-button>
-        </form>
+		<paper-button raised class="loginButton" id="btnLogin" onclick="promptLogin();">Login</paper-button>
+		<paper-button raised class="loginButton" id="btnRegister" onclick="goToRegister();">Register</paper-button>
 
     </div>
 
     <paper-toast id="toastSubmit" text="Checking login."></paper-toast>
+<?php
+	function updatePHPSession($email){
+		$_SESSION['userEmail'] = $email;
+	}
+?>
 
+<script>
+	function goToRegister(){
+		window.location.href = "http://dias11.cs.trinity.edu/~rbierman/ScheduleGuru/register.php";
+	}
 
+	function promptLogin(){
+		var email = document.querySelector('#txtEmail').value;
+		var pw = document.querySelector('#txtPassword').value;
+
+		login(email,pw);
+		if(result['UserID'] == undefined) {
+			alert("Wrong logins");
+			$('#loginMessage').innerHTML = "Incorrect login credentials. Please try again.";
+		}
+		else {
+			localStorage.setItem("userEmail",email);
+			window.location.href = "http://dias11.cs.trinity.edu/~rbierman/ScheduleGuru/index.php";
+		}
+	}
+</script>
 </body>
 </html>
