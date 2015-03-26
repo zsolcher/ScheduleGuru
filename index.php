@@ -64,13 +64,13 @@
 </head>
 
 <body>
-<script src="js/initialize_master.js"></script>
-<script src="js/calendar.js"></script>
-<script src="js/buildClassTable.js"></script>
 <script>
 	var userEmail = localStorage.getItem("userEmail");
 	getUserData(userEmail);
-	var currentUser = result;
+	var currentUser = Object();
+	var fields = Array('UserID','Email','Major','FirstName','LastName','Year');
+	for(var i = 0; i < fields.length; ++i) currentUser[fields[i]] = result[fields[i]];
+	result = {};
 </script>
 
 <core-scaffold id="scaffold">
@@ -153,6 +153,9 @@
 	</div>
 
 </core-scaffold>
+<script src="js/initialize_master.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/buildClassTable.js"></script>
 
 </body>
 </html>

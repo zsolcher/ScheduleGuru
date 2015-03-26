@@ -1,6 +1,5 @@
 <?php
 	include('./php/updateSite.php');
-	session_start();
 ?>
 
 <!DOCTYPE html>
