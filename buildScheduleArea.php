@@ -32,7 +32,7 @@
     </section>
     <section>
         <div class="page" id="pagePreferences">
-            <div id="areaMajor">
+            <div class="preferenceArea" id="areaMajor">
                 <label for="selectMajor">Choose your major: </label>
                 <select id="selectMajor">
                     <option selected>Undecided</option>
@@ -82,21 +82,37 @@
                 <br><br>
 
             </div>
-            <div id="areaInterests">
-                <br><br>areaInterests<br><br>
+            <div class="preferenceArea" id="areaTimes">
+                <label for="radioGroupStart">When can you start class? </label>
+                <paper-radio-group selected="8" id="radioGroupStart">
+                    <paper-radio-button name="8" label="8:30"></paper-radio-button>
+                    <paper-radio-button name="9" label="9:30"></paper-radio-button>
+                    <paper-radio-button name="10" label="10:30"></paper-radio-button>
+                    <paper-radio-button name="11" label="11:30"></paper-radio-button>
+                    <paper-radio-button name="12" label="12:30"></paper-radio-button>
+                </paper-radio-group>
+                <br>
+                <label for="radioGroupStart">From which time are you unavailable? </label>
+                <paper-radio-group selected="8" id="radioGroupStart">
+                    <paper-radio-button name="8" label="12:30"></paper-radio-button>
+                    <paper-radio-button name="9" label="1:30"></paper-radio-button>
+                    <paper-radio-button name="10" label="2:30"></paper-radio-button>
+                    <paper-radio-button name="11" label="3:30"></paper-radio-button>
+                    <paper-radio-button name="12" label="4:30"></paper-radio-button>
+                </paper-radio-group>
             </div>
-            <div id="areaTimes">
-                <br><br>areaTimes<br><br>
-            </div>
-            <div id="areaDays">
-                <br><br>
-                <paper-checkbox label="Monday"></paper-checkbox>
-                <paper-checkbox label="Tuesday"></paper-checkbox>
-                <paper-checkbox label="Wednesday"></paper-checkbox>
-                <paper-checkbox label="Thursday"></paper-checkbox>
-                <paper-checkbox label="Friday"></paper-checkbox>
-                <paper-checkbox label="Saturday"></paper-checkbox>
-                <paper-checkbox label="Sunday"></paper-checkbox>
+            <div class="preferenceArea" id="areaDays">
+                <label for="divDaysAvailable">Which days do you want to search on? </label>
+                <div id="divDaysAvailable">
+                    <paper-checkbox label="Monday"></paper-checkbox>
+                    <paper-checkbox label="Tuesday"></paper-checkbox>
+                    <paper-checkbox label="Wednesday"></paper-checkbox>
+                    <paper-checkbox label="Thursday"></paper-checkbox>
+                    <paper-checkbox label="Friday"></paper-checkbox>
+                    <paper-checkbox label="Saturday"></paper-checkbox>
+                    <paper-checkbox label="Sunday"></paper-checkbox>
+                </div>
+
                 <br><br>
             </div>
         </div>

@@ -14,10 +14,6 @@ div.page {
     height: 100%
 }
 
-#pageUploadTranscript {
-
-}
-
 /*
   ----------------- Core -----------------
 */
@@ -79,6 +75,8 @@ paper-tabs paper-tab::shadow #ink {
     text-align: center;
     vertical-align: middle;
 }
+
+
 
 
 /*
@@ -177,6 +175,10 @@ html>body tbody.scrollContent td + td + td + td {
 /*
   ----------------- Preferences Area -----------------
 */
+
+.preferenceArea {
+    padding: 30px;
+}
 
 p.areaLabel {
     font-family: "Open Sans", sans-serif;
