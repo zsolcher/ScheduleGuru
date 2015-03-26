@@ -33,47 +33,42 @@
 
 <body>
 
-	<h3>Create An Account</h3>
-
-	<form action="./validate_registration.php" method="post">
-		
+	<form id="registerArea" action="./validate_registration.php" method="post">
+        <h3 id="title">Create An Account</h3>
 		
 		<paper-input-decorator class="textInput" id="inputFirst" name="new_user_fname" label="First Name" floatingLabel>
 			<input is="core-input" id="new_user_fname" value="">
 		</paper-input-decorator>
 		
-		<br>
 		
 		<paper-input-decorator class="textInput" id="inputLast" name="new_user_lname" label="Last Name" floatingLabel>
 			<input is="core-input" id="new_user_lname" value="">
 		</paper-input-decorator>
 		
-		<br>
 		
 		
 		<paper-input-decorator class="textInput" id="inputEmail" name="new_user_email" label="email address" floatingLabel>
 			<input is="core-input" id="new_user_email" value="">
 		</paper-input-decorator>
 		
-		<br>
 		
 		<paper-input-decorator class="textInput" id="inputPassword" name="new_user_pwd1" label="password"  floatingLabel>
                 <input is="core-input" id="new_user_pwd1" type="password" value="">
             </paper-input-decorator>
 
-		<br>
-		
+
 		<paper-input-decorator class="textInput" id="inputPassword" name="new_user_pwd2" label="Re-Enter Password"  floatingLabel>
                 <input is="core-input" id="new_user_pwd2" type="password" value="">
             </paper-input-decorator>
+		
+		<paper-button raised class="registerButton" id="btnReg">Register</paper-button>
 
-		<br>
-		<input type="submit" value="Register now!">
-	</form>
 
 	<header>
-		Already a user? <a href="../index.php">Back to login...</a>
+		Already a user? <a href="./index.php">Back to login...</a>
 	</header>
+		
+		</form>
 
 </body>
 
