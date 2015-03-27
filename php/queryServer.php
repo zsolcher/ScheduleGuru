@@ -9,6 +9,8 @@
 	$userData = "userData";
 	$getAllDepartment = "getAllDepartment";
 	$savedSchedules = "savedSchedules";
+	$registerUser = "registerUser";
+	$getCC = "getCC";
 	
 
 	$mysqli = mysqli_connect("localhost","colson1","0735524","ScheduleGuru");
@@ -51,6 +53,18 @@
 	}elseif($request ===$savedSchedules) {
 		$userID = $_GET['UserID'];	
 		$query = "SELECT * FROM SavedSchedules WHERE UserID='".$userID."';";
+	}elseif($request ===$registerUser) {
+		$firstName = $_GET['FirstName'];
+		$lastName = $_GET['LastName'];
+		$username = $_GET['username'];
+		$password = $_GET['password'];
+		$query = "INSERT INTO Users(FirstName,LastName,Email,Password) VALUES ('".$firstName."','".$lastName."','".$username."','".$password."');";
+	}elseif($request ===$getCC) {
+		$mwf = $_GET['mwf'];
+		$tr = $_GET['tr'];
+		$startTime = $_GET['startTime'];
+		$endTime = $_GET['endTime'];	
+		$query = "SELECT * FROM AllClasses WHERE (Days='".$mwf."' OR Days ='".$tr."') AND StartTime >= '".$startTime."' AND EndTime <= '".$endTime."';";
 	}
 	$result = mysqli_query($mysqli,$query) or die(mysqli_error($mysqli));
 	
@@ -93,6 +107,13 @@
 			}
 			echo json_encode($toReturn);
 		}elseif($request === $savedSchedules) {
+			while($row = mysqli_fetch_assoc($result)){
+				array_push($toReturn,$row);
+			}
+			echo json_encode($toReturn);
+		}elseif($request === $registerUser) {
+			echo "1";
+		}elseif($request === $getCC) {
 			while($row = mysqli_fetch_assoc($result)){
 				array_push($toReturn,$row);
 			}

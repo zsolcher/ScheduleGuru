@@ -15,8 +15,7 @@
 
 <script type="text/javascript">
 var arr = {};
-function sendQuery(data){
-	
+/*function sendQuery(data){
 	var xmlhttp;
 	if (window.XMLHttpRequest){
   		xmlhttp=new XMLHttpRequest();
@@ -33,36 +32,29 @@ function sendQuery(data){
   	}
   	xmlhttp.open("GET","queryServer.php?"+data,true);
   	xmlhttp.send();
-}
+}*/
 function testPrereqs(){
-	//sendQuery("request=prereqs&ClassID=2");
-	arr = getPrereqs("2");
+	sendQuery("request=prereqs&ClassID=2");
 	displayOutput();
 	document.getElementById("2").innerHTML = "";
 }
 function testClassData(){
-  	//sendQuery("request=classData&ClassID=41141");
-  	arr = getClassData("41141");
+  	sendQuery("request=classData&ClassID=41141");
   	displayOutput();
   	document.getElementById("2").innerHTML = "";
 }
 function testSameAs(){
-  	//sendQuery("request=sameAs&ClassID=42258");
-  	arr = classSameAs("42258");
+  	sendQuery("request=sameAs&ClassID=42258");
   	displayOutput();
   	document.getElementById("2").innerHTML = "";
 }
 function testLogin(){
-	arr = login("rbierman@trinity.edu","lololol");
-	var tbl = document.getElementById("tbl");
-  			tbl.innerHTML = arr;
-  	//sendQuery("request=login&username=rbierman@trinity.edu&password=lololol");
+	sendQuery("request=login&username=rbierman@trinity.edu&password=lololol");
+	displayOutput();
   	document.getElementById("2").innerHTML = "";
 }
 function testClassesTaken(){
-	//sendQuery("request=classesTaken&UserID=740432");
-	arr = classesTaken("740432");
-	displayOutput();
+	sendQuery("request=classesTaken&UserID=740432");
 	document.getElementById("2").innerHTML = "";
 }
 function testUpdateAccountSettings(){
@@ -86,9 +78,9 @@ function testgetAllCSCIClasses(){
 	document.getElementById("2").innerHTML = "";
 }
 function displayOutput(){
-	console.log(arr);
+	console.log(JSON.stringify(result));
 	var tbl = document.getElementById("tbl");
-  	tbl.innerHTML = arr;
+  	tbl.innerHTML = JSON.stringify(result);
 }
 </script>
 	<input type="button" value="Test Prereqs" onclick="testPrereqs()"><br>

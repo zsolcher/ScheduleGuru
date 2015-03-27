@@ -79,6 +79,6 @@ function populateCC(){
 	list.innerHTML = '';
 	var str = "";
 	for (var a =0; a<9; a++){
-		str += 
+			
 	}
 }

@@ -1,4 +1,3 @@
-<script type="text/javascript" >
 //0 IF NO NEW DATA WAS ENTERED OR IF WRONG DATA WAS ENTERED
 //1 FOR SUCCESS
 // ANY OTHER NUMBER SOMETHING WENT WRONG
@@ -55,4 +54,3 @@ function registerUser(username,password,firstname,lastname){
 function getCC(mwf,tr,startTime,endTime){
 	sendQuery("request=getCC&mwf="+mwf+"&tr="+tr+"&startTime="+startTime+"&endTime="+endTime);	
 }
-</script>
