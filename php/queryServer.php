@@ -63,8 +63,10 @@
 		$mwf = $_GET['mwf'];
 		$tr = $_GET['tr'];
 		$startTime = $_GET['startTime'];
-		$endTime = $_GET['endTime'];	
-		$query = "SELECT * FROM AllClasses WHERE (Days='".$mwf."' OR Days ='".$tr."') AND StartTime >= '".$startTime."' AND EndTime <= '".$endTime."';";
+		$endTime = $_GET['endTime'];
+		$ccSection = $_GET['ccSection'];
+		$query = "SELECT * FROM AllClasses WHERE (Days='".$mwf."' OR Days ='".$tr."') AND StartTime >= '".$startTime."' AND EndTime <= '".$endTime."' AND CCSection = '".$ccSection."';";
+		//echo $query;	
 	}
 	$result = mysqli_query($mysqli,$query) or die(mysqli_error($mysqli));
 	

@@ -59,12 +59,14 @@
 		$username = $_GET['username'];
 		$password = $_GET['password'];
 		$query = "INSERT INTO Users(FirstName,LastName,Email,Password) VALUES ('".$firstName."','".$lastName."','".$username."','".$password."');";
-	}elseif($request ===$savedSchedules) {
+	}elseif($request ===$getCC) {
 		$mwf = $_GET['mwf'];
 		$tr = $_GET['tr'];
 		$startTime = $_GET['startTime'];
-		$endTime = $_GET['endTime'];	
-		$query = "SELECT * FROM AllClasses WHERE (Days='".$mwf."' OR Days ='".$tr."') AND StartTime >= '".$startTime."' AND EndTime <= '".$endTime."';";
+		$endTime = $_GET['endTime'];
+		$ccSection = $_GET['ccSection'];
+		$query = "SELECT * FROM AllClasses WHERE (Days='".$mwf."' OR Days ='".$tr."') AND StartTime >= '".$startTime."' AND EndTime <= '".$endTime."' AND CCSection = '".$ccSection."';";
+		echo $query;	
 	}
 	$result = mysqli_query($mysqli,$query) or die(mysqli_error($mysqli));
 	
@@ -113,6 +115,11 @@
 			echo json_encode($toReturn);
 		}elseif($request === $registerUser) {
 			echo "1";
+		}elseif($request === $getCC) {
+			while($row = mysqli_fetch_assoc($result)){
+				array_push($toReturn,$row);
+			}
+			//echo json_encode($toReturn);
 		}
 	}
 ?>

@@ -13,6 +13,8 @@ function sendQuery(data){
   	xmlhttp.onreadystatechange=function(){
   		if(xmlhttp.readyState==4 && xmlhttp.status==200){
   			result = JSON.parse(xmlhttp.responseText);
+  			//alert(xmlhttp.responseText);
+  			//console.log(xmlhttp.responseText);
   		}
   	}
   	xmlhttp.open("GET","./php/queryServer.php?"+data,false);
@@ -51,6 +53,6 @@ function getSavedSchedules(userID){
 function registerUser(username,password,firstname,lastname){
 	sendQuery("request=registerUser&username="+username+"&password="+password+"&FirstName="+firstname+"&LastName="+lastname);	
 }
-function getCC(mwf,tr,startTime,endTime){
-	sendQuery("request=getCC&mwf="+mwf+"&tr="+tr+"&startTime="+startTime+"&endTime="+endTime);	
+function getCC(mwf,tr,startTime,endTime,ccSection){
+	sendQuery("request=getCC&mwf="+mwf+"&tr="+tr+"&startTime="+startTime+"&endTime="+endTime+"&ccSection="+ccSection);	
 }

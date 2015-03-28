@@ -94,9 +94,9 @@
                 <br>
                 <input type="radio" name="radioEnd" value="11:20:00">11:20</input>
                 <input type="radio" name="radioEnd" value="12:20:00">12:20</input>
-                <input type="radio" name="radioEnd" value="1:20:00">1:20</input>
-                <input type="radio" name="radioEnd" value="2:20:00">2:20</input>
-                <input type="radio" name="radioEnd" value="3:55:00">3:55</input>
+                <input type="radio" name="radioEnd" value="13:20:00">1:20</input>
+                <input type="radio" name="radioEnd" value="14:20:00">2:20</input>
+                <input type="radio" name="radioEnd" value="15:55:00">3:55</input>
             	<br><br>
                 <label for="divDaysAvailable">Which days do you want to have class? </label>
                 	<br>
@@ -116,26 +116,11 @@
         </div>
     </section>
     <section>
-        <div class="page" id="page4">
-        	<p style="position: absolute; top: 0; left: 0;">These are the Common Curriculum classes that fit within your time preferences and do not conflict with a class you are taking for your major. Please select all you would like to take. There is an additional step where you may select non-Common Curriculum classes if you so wish.
+        	<p>These are the Common Curriculum classes that fit within your time preferences and do not conflict with a class you are taking for your major. Please select all you would like to take. There is an additional step where you may select non-Common Curriculum classes if you so wish.
 			</p><b><u>Understanding Cultural Heritage</u></b>
         	 <ul id="cc">
-   	     	 <li>
-   	     	 	Traditions Indigenous
-   	     	 	<ul>
-        	 			<li><input type="checkbox">test</input></li>
-        	 			<li><input type="checkbox">test2</input></li>
-        	 		</ul>
-        	 	 </li>
-        	 	 <li>
-        	 		Greco-Roman
-					<ul>
-						<li><input type="checkbox">test</input></li>
-        	 			<li><input type="checkbox">test2</input></li>
-        	 		</ul>
-        	 	 </li>
+   	     	 
         	 </ul>
-        </div>
     </section>
     <section>
         <div class="page" id="page5">

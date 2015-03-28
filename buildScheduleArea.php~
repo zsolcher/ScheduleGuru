@@ -116,10 +116,9 @@
         </div>
     </section>
     <section>
-        <div class="page" id="page4">
-        	<p style="position: absolute; top: 0; left: 0;">These are the Common Curriculum classes that fit within your time preferences and do not conflict with a class you are taking for your major. Please select all you would like to take. There is an additional step where you may select non-Common Curriculum classes if you so wish.
+        	<p>These are the Common Curriculum classes that fit within your time preferences and do not conflict with a class you are taking for your major. Please select all you would like to take. There is an additional step where you may select non-Common Curriculum classes if you so wish.
 			</p><b><u>Understanding Cultural Heritage</u></b>
-        	 <ul id="cc1">
+        	 <ul id="cc">
    	     	 <li>
    	     	 	Traditions Indigenous
    	     	 	<ul>
@@ -135,7 +134,6 @@
         	 		</ul>
         	 	 </li>
         	 </ul>
-        </div>
     </section>
     <section>
         <div class="page" id="page5">

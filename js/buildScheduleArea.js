@@ -59,6 +59,10 @@ function changeTabColor(oriColoredTab) {
 	tabOn.style.fontWeight = 'bold';
 }
 
+var ccSectionNames = ["Traditions Indigenous","...Traditions through the Early Modern Period",
+	"Arts","Literary Studies","Social Sciences","Social Issues and Values",
+	"Quantitative Reasoning","Natural Science","Using Scientific Methods"];
+
 function populateCC(){
 	var mwf = '';
 	var tr = '';
@@ -73,12 +77,22 @@ function populateCC(){
 	}
 	var sT = $('input[name=radioStart]:checked').val();
 	var eT = $('input[name=radioEnd]:checked').val();
-	getCC(mwf,tr,sT,eT);
-	
 	var list = document.getElementById("cc");
 	list.innerHTML = '';
 	var str = "";
 	for (var a =0; a<9; a++){
-		str += 
+		str+="<li>"+ccSectionNames[a]+"<ul>";
+		getCC(mwf,tr,sT,eT,a);
+		console.log(result.length);
+		if(result === "0" || result.length == 0){
+			str+="<li>No options</li>";		
+		}
+		else{
+			for(var b =0; b<result.length; ++b){
+					str+="<li><input type=\"checkbox\">"+result[b]['Name']+"</input></li>";
+			}
+		}
+		str+="</ul></li>";
 	}
+	list.innerHTML = str;
 }
