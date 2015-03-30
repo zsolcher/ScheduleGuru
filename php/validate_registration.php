@@ -26,7 +26,7 @@ try {
 
     if($noRows == 0) {
         if($_POST['new_user_pwd1'] == $_POST['new_user_pwd2']) {
-            $qry = "INSERT INTO users (first_name, last_name, email, passwd) VALUES (:first_name, :last_name, :email, :passwd);";
+            $qry = "INSERT INTO Users (first_name, last_name, email, passwd) VALUES (:first_name, :last_name, :email, :passwd);";
             $stmt = $conn->prepare($qry);
 
             // bind parameters

@@ -103,8 +103,7 @@
         <li id="tab2">Preferences</li>
         <li id="tab3">Major</li>
         <li id="tab4">Common Curriculum</li>
-        <li id="tab5">Miscellaneous</li>
-        <li id="tab6">Finalize</li>
+        <li id="tab5">Finalize</li>
     </ul>
     </div>
 
@@ -139,23 +138,6 @@
     		$( "#aboutUsArea" ).load( "aboutUsArea.php" );
     	</script>
     </div>
-
-	<div id="calendarArea">
-		<!-- The calendar is currently just showing a schedule from file -->
-		<!--
-		<input id="addClassField" style="text"> </input>
-		<button onclick="getClassData(addClassField.value);addCalendarClass(result);">Add class by ID</button>
-		<p>(Examples: 42258, 42570, 42241, 42569)</p><br />
-		<input id="removeClassField" style="text"> </input>
-		<button onclick="removeCalendarClass(removeClassField.value)">Remove result from calendar</button>
-		<button onclick="addClassTableToDiv('#calendarArea','testTable');">Add a class table</button>
-		<button onclick="displayTable('testTable');">Display testTable</button>
-		<button onclick="addClassToTableObject('testTable',result);">Add 'result' to table</button><br /><br />
-		-->
-		<input id="departmentField" style="text" value="CSCI"> </input><br />
-		<button onclick="fillDepartmentTable('#calendarArea',departmentField.value);">Fill in whole department table</button>
-
-	</div>
 
 </core-scaffold>
 <script src="js/initialize_master.js"></script>

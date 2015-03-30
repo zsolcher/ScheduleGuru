@@ -18,17 +18,22 @@ div.page {
     height: 100%
 }
 
+div {
+	float: center;
+}
+
 /*
   ----------------- Core -----------------
 */
 core-animated-pages {
     width: 850px;
-    height: 600px;
+    height: 650px;
     border: 2px solid black;
     -webkit-user-select: none;
     border-radius: 5px;
-    overflow: hidden;
+    overflow: auto;
     margin-top: 7px;
+	margin-left: 100px;
 }
 
 /*
@@ -192,4 +197,11 @@ p.areaLabel {
 
 #selectMajor {
 
+}
+
+/*
+  ----------------- Calendar Area -----------------
+*/
+canvas {
+	color: black;
 }

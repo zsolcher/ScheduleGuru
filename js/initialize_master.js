@@ -17,7 +17,8 @@ window.onload = function() {
     }
 
     //Create calendar then hide all areas other than home
-	createCalendar();
+	createCalendarUnderDiv("buildScheduleArea");
+	canvas.style.display = "none";
     hideAllAreas();
     $("#homeArea").show();
 

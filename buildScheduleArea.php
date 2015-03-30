@@ -34,7 +34,7 @@
         <div class="page" id="pagePreferences">
             <div class="preferenceArea">
                 <label for="selectMajor">Choose your major: </label>
-                <select id="selectMajor">
+                <select id="selectMajor" onchange="majorOnChangeResponse();">
                     <option selected>Undecided</option>
                     <option>Anthropology</option>
                     <option>Art</option>
@@ -81,38 +81,38 @@
                 </select>
                 <br><br>
             
-            
                 <label for="radioGroupStart">What time do you want the earliest class to start? </label>
 						<br>                
-                <input type="radio" name="radioStart" value="08:30:00">8:30</input>
-                <input type="radio" name="radioStart" value="09:30:00">9:30</input>
-                <input type="radio" name="radioStart" value="10:30:00">10:30</input>
-                <input type="radio" name="radioStart" value="11:30:00">11:30</input>
-                <input type="radio" name="radioStart" value="12:30:00">12:30</input>
+                <input type="radio" name="radioStart" value="No Preference" onchange="preferedStartOnChange(this);" checked="true">No Preference</input>
+                <input type="radio" name="radioStart" value="08:30:00" onchange="preferedStartOnChange(this);">8:30</input>
+                <input type="radio" name="radioStart" value="09:30:00" onchange="preferedStartOnChange(this);">9:30</input>
+                <input type="radio" name="radioStart" value="10:30:00" onchange="preferedStartOnChange(this);">10:30</input>
+                <input type="radio" name="radioStart" value="11:30:00" onchange="preferedStartOnChange(this);">11:30</input>
+                <input type="radio" name="radioStart" value="12:30:00" onchange="preferedStartOnChange(this);">12:30</input>
                 <br><br>
                 <label for="radioGroupStart">What time do you want the latest class to end? </label>
                 <br>
-                <input type="radio" name="radioEnd" value="11:20:00">11:20</input>
-                <input type="radio" name="radioEnd" value="12:20:00">12:20</input>
-                <input type="radio" name="radioEnd" value="13:20:00">1:20</input>
-                <input type="radio" name="radioEnd" value="14:20:00">2:20</input>
-                <input type="radio" name="radioEnd" value="15:55:00">3:55</input>
+                <input type="radio" name="radioEnd" value="No Preference" checked="true" onchange="preferedEndOnChange(this);">No Preference</input>
+                <input type="radio" name="radioEnd" value="11:20:00" onchange="preferedEndOnChange(this);">11:20</input>
+                <input type="radio" name="radioEnd" value="12:20:00" onchange="preferedEndOnChange(this);">12:20</input>
+                <input type="radio" name="radioEnd" value="13:20:00" onchange="preferedEndOnChange(this);">1:20</input>
+                <input type="radio" name="radioEnd" value="14:20:00" onchange="preferedEndOnChange(this);">2:20</input>
+                <input type="radio" name="radioEnd" value="15:55:00" onchange="preferedEndOnChange(this);">3:55</input>
             	<br><br>
                 <label for="divDaysAvailable">Which days do you want to have class? </label>
                 	<br>
-                	<input type="checkbox" name="days" value="M" checked="true">Monday</input>
-                	<input type="checkbox" name="days" value="T" checked="true">Tuesday</input>
-                	<input type="checkbox" name="days" value="W" checked="true">Wednesday</input>
-                	<input type="checkbox" name="days" value="R" checked="true">Thursday</input>
-                	<input type="checkbox" name="days" value="F" checked="true">Friday</input>
+                	<input type="checkbox" name="days" value="M" checked="true" onchange="preferedDaysOnChange(this);">Monday</input>
+                	<input type="checkbox" name="days" value="T" checked="true" onchange="preferedDaysOnChange(this);">Tuesday</input>
+                	<input type="checkbox" name="days" value="W" checked="true" onchange="preferedDaysOnChange(this);">Wednesday</input>
+                	<input type="checkbox" name="days" value="R" checked="true" onchange="preferedDaysOnChange(this);">Thursday</input>
+                	<input type="checkbox" name="days" value="F" checked="true" onchange="preferedDaysOnChange(this);">Friday</input>
 
                 <br>
                 </div>
         </div>
     </section>
     <section>
-        <div class="page" id="page3">
-            three
+        <div  id="majorClassOptions">
         </div>
     </section>
     <section>
@@ -123,17 +123,13 @@
         	 </ul>
     </section>
     <section>
-        <div class="page" id="page5">
-            five
-        </div>
-    </section>
-    <section>
-        <div class="page" id="page6">
-            six
+        <div class="page" id="finalize">
+            
         </div>
     </section>
 </core-animated-pages>
 <paper-fab class="fabNavRight" icon="chevron-right"></paper-fab>
 
 <script src="js/buildScheduleArea.js"></script>
+<script src="js/buildClassTable.js"></script>
 </html>
