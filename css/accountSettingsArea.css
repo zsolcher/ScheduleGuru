@@ -29,7 +29,7 @@ body {
     top:60%;
     margin: 20px 20px 20px 20px;
     height: 550px;
-    width: 500px;
+    width: 450px;
 
     border-radius: 20px 20px 20px 20px;
     -moz-border-radius: 20px 20px 20px 20px;
@@ -43,12 +43,12 @@ body {
 #updateSettingsArea{
     background-color: #7986cb;
 
-    float: left;
+    float: right;
 	right:50%;
     top:60%;
     margin: 20px 20px 20px 20px;
-    height: 550px;
-    width: 500px;
+    height: 800px;
+    width: 450px;
 
     border-radius: 20px 20px 20px 20px;
     -moz-border-radius: 20px 20px 20px 20px;

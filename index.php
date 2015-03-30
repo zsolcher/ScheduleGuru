@@ -69,7 +69,7 @@
 <body>
 <script>
 	var userEmail = localStorage.getItem("userEmail");
-	//if(userEmail == null) window.location.href = "login.php";
+	if(userEmail == null) window.location.href = "login.php";
 	getUserData(userEmail);
 	var currentUser = Object();
 	var fields = Array('UserID','Email','Major','FirstName','LastName','Year');
@@ -85,10 +85,9 @@
         <core-menu id="navmenu">
             <core-item  class="menuItem selected" id="menuItemHome" icon="home" label="Home"></core-item>
             <core-item  class="menuItem" id="menuItemBuildSchedule" icon="schedule" label="Build a Schedule"></core-item>
-            <core-item  class="menuItem" id="menuItemSavedSchedules" icon="save" label="Saved Schedules"></core-item>
+            <!-- core-item  class="menuItem" id="menuItemSavedSchedules" icon="save" label="Saved Schedules"></core-item -->
             <core-item  class="menuItem" id="menuItemAccountSettings" icon="settings" label="Account Settings"></core-item>
             <core-item  class="menuItem" id="menuItemAboutUs" icon="star" label="About Us"></core-item>
-            <core-item  class="menuItem" id="menuItemCalendar" icon="book" label="Calendar"></core-item>
         </core-menu>
     </core-header-panel>
 
